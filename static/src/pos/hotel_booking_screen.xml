@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-name="tk_hotel_management.BookingScreen" owl="1">
+		<Dialog>
+			<div class="combo-screen screen h-100 bg-100">
+				<div class="controls d-flex align-items-center justify-content-between mt-1 mt-md-0 p-2 bg-400">
+					<div class="buttons d-flex gap-2">
+						<button class="back-button btn btn-lg lh-lg"
+                                t-att-class="{'btn-primary': screen === 'FloorScreen' and !pos.orderToTransferUuid}"
+                                t-on-click="() => this.onClickBackButton()">
+							<span>Back</span>
+						</button>
+					</div>
+                    <div class="search-bar-container sb-partner d-flex align-items-center w-100 w-lg-50 h-100 h-100"
+                         t-if="!state.detailIsShown">
+							<div class="input-group h-100">
+								<div class="pos-search-bar form-control d-flex align-items-center bg-view">
+									<i class="oi oi-search me-2" t-on-click="_onPressEnterKey"/>
+                                    <input class="flex-grow-1 w-auto h-100 border-0 p-2 me-4" type="text"
+                                           autofocus="autofocus" t-ref="search-word-input-booking"
+                                           placeholder="Search Bookings..." size="1" t-on-keyup="updateBookingList"/>
+                                    <i class="fa fa-times position-absolute end-0 me-2 pe-1 cursor-pointer"
+                                       t-on-click="_clearSearch"/>
+								</div>
+							</div>
+					</div>
+				</div>
+                <div class="orders overflow-y-auto flex-grow-1">
+						<t t-if="this.state.bookingList.length != 0">
+							<div class="header-row d-flex text-bg-700 fw-bolder">
+								<div class="col wide p-2">Booking Id</div>
+                                <div class="col wide p-2">Customer Name</div>
+							</div>
+                            <t t-set="bookingList" t-value="this.state.bookingList"/>
+                            <t t-foreach="bookingList" t-as="book" t-key="book.id">
+									<div t-att-class="state.selectedBooking and state.selectedBooking === book ? 'border' : ''">
+										<div class="order-row" t-att-data-id="book.id"
+                                             t-on-click="() => this.onClickBooking(book)">
+											<div class="col wide p-2 ">
+												<div>
+													<t t-esc="book.booking_number"/>
+												</div>
+											</div>
+											<div class="col wide p-2">
+												<div>
+													<t t-esc="this.pos.get_order().partner_id.name"/>
+												</div>
+											</div>
+										</div>
+										<t t-if="this.state.selectedBooking and this.state.selectedBooking.id === book.id">
+											<button class="unselect-tag d-lg-inline-block btn btn-light mt-2"
+                                                     t-on-click="() => this.onClickBooking(book)">
+												<i class="fa fa-times me-1"></i>
+                                                <span> Unselect </span>
+											</button>
+										</t>
+
+									</div>
+								</t>
+						</t>
+                    <t t-else="">
+							<div class="alert alert-info" role="alert">
+								No Booking Found or Please Select Customer
+							</div>
+						</t>
+				</div>
+			</div>
+		</Dialog>
+	</t>
+</templates>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="tk_hotel_management.hotel_dashboard" owl="1">
+        <section class="section hotel_manage_dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-md-12 mt32">
+                                <h4 class="tk-primary">Active Bookings</h4>
+                                <hr class="border-primary"/>
+                            </div>
+                            <div class="col-md-6" t-on-click="() => this.viewDashboardStatic('active_room')">
+                                <div class="card purple-bg p-32">
+                                    <div class="card-body purple-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Rooms</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['active_booking_count']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" t-on-click="() => this.viewDashboardStatic('active_hall')">
+                                <div class="card warn-bg p-32">
+                                    <div class="card-body warn-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Halls</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['hall_count']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-md-12 mt32">
+                                <h4 class="tk-primary">Today's Statistics</h4>
+                                <hr class="border-primary"/>
+                            </div>
+                            <div class="col-md-3" t-on-click="() => this.viewDashboardStatic('today_check_in')">
+                                <div class="card active-bg p-32">
+                                    <div class="card-body active-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Check In</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['today_check_in']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3" t-on-click="() => this.viewDashboardStatic('today_check_out')">
+                                <div class="card terminate-bg p-32">
+                                    <div class="card-body terminate-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Check Out</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['today_check_out']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3" t-on-click="() => this.viewDashboardStatic('food')">
+                                <div class="card all-bg p-32">
+                                    <div class="card-body all-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Food Orders</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['food_count']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3" t-on-click="() => this.viewDashboardStatic('transport')">
+                                <div class="card pink-bg p-32">
+                                    <div class="card-body pink-bg tk-card-body">
+                                        <img alt="users" width="40"
+                                             src="tk_hotel_management/static/src/dashboard_icons/visitors.svg"/>
+                                        <h4 class="tk-st-1">Transports</h4>
+                                        <h6 class="tk-st-2">
+                                            <t t-esc="state.hotelStats['transports_count']"/>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container hotel_manage_dashboard">
+                <div class="row mt32">
+                    <div class="col-md-6">
+                        <h5 class="mb16">Booking Status</h5>
+                        <hr class="border-primary"/>
+                        <div class="tk-os-chart" t-ref='bookingStatus'></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="mb16">Top 5 Customers</h5>
+                        <hr class="border-primary"/>
+                        <div class="tk-os-chart" t-ref='topCustomer'></div>
+                    </div>
+                    <div class="col-md-12 mt32">
+                        <h5 class="mb16">Monthly Bookings</h5>
+                        <hr class="border-primary"/>
+                        <div class="tk-os-chart-edited" t-ref='monthBooking'></div>
+                    </div>
+                    <div class="col-md-12 mt32">
+                        <h5 class="mb16">Date wise bookings</h5>
+                        <hr class="border-primary"/>
+                        <div class="tk-os-chart-edited" t-ref='dayBooking'></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </t>
+</templates>
