@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hotel_room_form_view" model="ir.ui.view">
+        <field name="name">hotel.room.form.view</field>
+        <field name="model">hotel.room</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="avatar" widget="image" class="oe_avatar"
+                           options="{&quot;preview_image&quot;: &quot;avatar&quot;}"/>
+                    <div class="oe_title mb24">
+                        <h1>
+                            <field class="text-break" name="room_no" default_focus="1"
+                                   placeholder="Room Number"/>
+                        </h1>
+                    </div>
+                    <group string="Room Details">
+                        <group>
+                            <field name="floor_id" options="{'no_create': True}"/>
+                            <field name="capacity" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="room_type_id" options="{'no_create': True}"/>
+                            <field name="product_id" readonly="1" invisible="not product_id"/>
+                        </group>
+                    </group>
+                    <group string="Pricing Details">
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <label for="base_price" string="Price"/>
+                            <div>
+                                <field name="base_price" class="oe_inline" required="1"
+                                       string="Price"/>
+                                / Night
+                            </div>
+                            <field name="increment_val" invisible="1" readonly="1"
+                                   string="Increment Amount"/>
+                            <label for="price" class="mt-1" string="Final Price" invisible="1"/>
+                            <div name="price" invisible="1">
+                                <field name="price" class="oe_inline" readonly="1" invisible="1"/>
+                                Per Night
+                            </div>
+                        </group>
+                        <group>
+                            <field name="increment_type" invisible="1" readonly="1"/>
+                            <label for="increment_percentage" string="Increment Percentage"
+                                   invisible="1"/>
+                            <div invisible="1">
+                                <field name="increment_percentage" readonly="1"/>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Facilities">
+                            <field name="room_facilities_ids">
+                                <kanban>
+                                    <field name="id"/>
+                                    <field name="name"/>
+                                    <templates>
+                                        <t t-name="card">
+                                            <div
+                                                    class="oe_kanban_global_click border-bottom rounded"
+                                                    style="width:130px;height:60px;">
+                                                <div
+                                                        style="width:40%;float:left;display:inline-block;">
+                                                    <img alt="Avtar"
+                                                         t-att-src="kanban_image('hotel.room.facilities','avatar',record.id.raw_value)"
+                                                         style="width:50px;height:40px;"/>
+                                                </div>
+                                                <div
+                                                        style="width:60%;float:right;display:inline-block;">
+                                                    <h5 style="color:#714B67;">
+                                                        <strong>
+                                                            <center>
+                                                                <field name="name"/>
+                                                            </center>
+                                                        </strong>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_room_list_view" model="ir.ui.view">
+        <field name="name">hotel.room.list.view</field>
+        <field name="model">hotel.room</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="room_no"/>
+                <field name="floor_id"/>
+                <field name="room_type_id"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="base_price" string="Price"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hotel_room_search_view" model="ir.ui.view">
+        <field name="name">hotel.room.search.view</field>
+        <field name="model">hotel.room</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="room_no"/>
+                <field name="floor_id"/>
+                <field name="room_type_id"/>
+                <field name="product_id"/>
+                <field name="base_price" string="Price"/>
+                <group name="group_by">
+                    <filter name="floor" string="Floors" context="{'group_by': 'floor_id'}"/>
+                    <filter name="room_type" string="Room Types"
+                            context="{'group_by': 'room_type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hotel_room_action" model="ir.actions.act_window">
+        <field name="name">Rooms</field>
+        <field name="res_model">hotel.room</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

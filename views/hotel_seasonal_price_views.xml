@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="season_price_view_form" model="ir.ui.view">
+        <field name="name">season.price.view.form</field>
+        <field name="model">season.price</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Season Title.." required="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="start_date" string="Season Time Period"/>
+                            <div class="d-flex">
+                                <field name="start_date" required="1"/>
+                                <span class="oe_inline o_form_label mx-3">To</span>
+                                <field name="end_date" required="1"/>
+                            </div>
+                            <field name="increment_type" widget="radio" options="{'horizontal': True}" required="1"/>
+                            <field name="increment_val"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="season_price_view_list" model="ir.ui.view">
+        <field name="name">season.price.view.list</field>
+        <field name="model">season.price</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="increment_type"/>
+                <field name="increment_val"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="season_price_action" model="ir.actions.act_window">
+        <field name="name">Seasonal Pricing</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">season.price</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

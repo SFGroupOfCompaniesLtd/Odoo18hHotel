@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="product_category_hotel" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Hotel</field>
+        </record>
+        <record id="hotel_invoice" model="product.product">
+            <field name="name">Hotel Invoice</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="agent_invoice" model="product.product">
+            <field name="name">Agent Invoice</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_feast_charges" model="product.product">
+            <field name="name">Hotel Hall Charge</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_feast_deposit" model="product.product">
+            <field name="name">Hotel Hall Deposit</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_cancellation_charge" model="product.product">
+            <field name="name">Hotel Cancellation Charge</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_extra_services_charge" model="product.product">
+            <field name="name">Hotel Extra Services Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_transportation_charge" model="product.product">
+            <field name="name">Hotel Transportation Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_restaurant_charge" model="product.product">
+            <field name="name">Hotel Restaurant Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_laundry_charge" model="product.product">
+            <field name="name">Hotel Laundry Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="hotel_room_charge" model="product.product">
+            <field name="name">Hotel Room Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+
+
+        <!--Room Types-->
+        <record id="room_type_duplex" model="hotel.room.type">
+            <field name="name">Duplex Room</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_single" model="hotel.room.type">
+            <field name="name">Single Room</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_deluxe" model="hotel.room.type">
+            <field name="name">Deluxe Room</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_standard" model="hotel.room.type">
+            <field name="name">Standard Suite</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_luxury" model="hotel.room.type">
+            <field name="name">Luxury Suite</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_presidential" model="hotel.room.type">
+            <field name="name">Presidential Suite</field>
+            <field name="base_price">50</field>
+        </record>
+        <record id="room_type_penthouse" model="hotel.room.type">
+            <field name="name">Penthouse Suite</field>
+            <field name="base_price">50</field>
+        </record>
+
+        <!--Project-->
+        <record id="house_keeping_project" model="project.project">
+            <field name="name">Housekeeping</field>
+            <field name="privacy_visibility">employees</field>
+        </record>
+
+        <!--Meal Products-->
+        <record id="room_breakfast" model="product.product">
+            <field name="name">Breakfast Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="room_lunch" model="product.product">
+            <field name="name">Lunch Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+        <record id="room_dinner" model="product.product">
+            <field name="name">Dinner Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+
+        <!--Discount Product-->
+        <record id="room_charges_discount" model="product.product">
+            <field name="name">Discount on Room Charges</field>
+            <field name="type">service</field>
+            <field name="categ_id" ref="tk_hotel_management.product_category_hotel"/>
+        </record>
+    </data>
+</odoo>

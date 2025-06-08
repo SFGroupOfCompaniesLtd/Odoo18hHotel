@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hotel_room_details_form_view" model="ir.ui.view">
+        <field name="name">hotel.room.details.form.view</field>
+        <field name="model">hotel.room.details</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <header>
+                    <field name="stages" widget="statusbar" statusbar_visible="Available,Booked"/>
+                    <button string="Book" name="available_to_booked" type="object"
+                            invisible="1"/>
+                    <button string="Maintenance" name="booked_to_maintenance" type="object"
+                            invisible="1"/>
+                    <button string="Available" name="maintenance_to_available" type="object"
+                            invisible="1"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="room_sequence"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="booking_id" string="Booking Number" readonly="1"/>
+                            <field name="customer_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Room Details">
+                            <field name="room_ids" widget="many2many_tags" invisible="1"/>
+                            <field name="room_id" options="{'no_create': True}"/>
+                            <field name="currency_id" invisible="1"/>
+                            <label for="price" class="mt-1" string="Charge" invisible="1"/>
+                            <div name="price" invisible="1">
+                                <field name="price" class="oe_inline"/>
+                                Per Night
+                            </div>
+                            <label for="charges_per_night" class="mt-1" string="Charges"/>
+                            <div name="charges_per_night">
+                                <field name="charges_per_night" class="oe_inline" readonly="1"
+                                       force_save="1"/>
+                                / Night
+                            </div>
+                            <field name="tax_ids" widget="many2many_tags"/>
+                            <field name="room_capacity"/>
+                            <field name="total_price"/>
+                        </group>
+                        <group string="Booking Details">
+                            <field name="check_in"/>
+                            <field name="check_out"/>
+                            <field name="days"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_room_details_calendar_view" model="ir.ui.view">
+        <field name="name">hotel.details.calendar.view</field>
+        <field name="model">hotel.room.details</field>
+        <field name="arch" type="xml">
+            <calendar date_start="check_in" date_stop="check_out" mode="month" quick_create="False"
+                      hide_time="True" event_open_popup="True" color="booking_id" create="false">
+                <field name="booking_id"/>
+                <field name="customer_id"/>
+            </calendar>
+        </field>
+    </record>
+    <record id="hotel_room_details_search_view" model="ir.ui.view">
+        <field name="name">hotel.room.details.search.view</field>
+        <field name="model">hotel.room.details</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="room_sequence"/>
+                <field name="booking_id"/>
+                <field name="customer_id"/>
+                <field name="room_id"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+                <group string="Group By">
+                    <filter name="check_in" string="Check in "
+                            context="{'group_by':'check_in' }"
+                    />
+                    <filter name="check_out" string="Check out"
+                            context="{'group_by':'check_out' }"
+                    />
+                    <filter name="stages" string="Status"
+                            context="{'group_by':'stages' }"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_room_details_list_view" model="ir.ui.view">
+        <field name="name">hotel.room.details.list.view</field>
+        <field name="model">hotel.room.details</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false">
+                <field name="room_sequence"/>
+                <field name="booking_id" string="Booking Number"/>
+                <field name="customer_id"/>
+                <field name="room_id" options="{'no_create': True}"/>
+                <field name="room_capacity"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+                <field name="days"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="price" column_invisible="1"/>
+                <field name="charges_per_night" string="Charges / Night"/>
+                <field name="stages" widget="badge"
+                       decoration-success="stages=='Available'"
+                       decoration-danger="stages=='Booked'"
+                       decoration-info="stages=='Maintenance'"/>
+
+            </list>
+        </field>
+    </record>
+    <record id="hotel_room_details_action" model="ir.actions.act_window">
+        <field name="name">Room Booked Details</field>
+        <field name="res_model">hotel.room.details</field>
+        <field name="view_mode">list,form,calendar,activity</field>
+    </record>
+</odoo>

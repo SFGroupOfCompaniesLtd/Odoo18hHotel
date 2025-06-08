@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="add_extra_people_view_form" model="ir.ui.view">
+        <field name="name">add_extra_people_view_form</field>
+        <field name="model">extra.people.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="booking_id" invisible="1"/>
+                            <field name="room_detail_id" domain="[('booking_id', '=', booking_id)]" required="1"/>
+                            <field name="adult_quantity"/>
+                            <field name="child_quantity"/>
+                            <field name="charges"/>
+                        </group>
+                        <group>
+                            <field name="number_of_days"/>
+                            <label for="per_adult_extra_charges" string="Charges / Adult"/>
+                            <div>
+                                <field name="per_adult_extra_charges" class="oe_inline"/>
+                                / Night
+                            </div>
+                            <label for="per_child_extra_charges" string="Charges / Child"/>
+                            <div>
+                                <field name="per_child_extra_charges" class="oe_inline"/>
+                                / Night
+                            </div>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Add Charges" name="add_extra_service_charges" type="object"
+                            class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="add_extra_people_action" model="ir.actions.act_window">
+        <field name="name">Add Extra Person Charges</field>
+        <field name="res_model">extra.people.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

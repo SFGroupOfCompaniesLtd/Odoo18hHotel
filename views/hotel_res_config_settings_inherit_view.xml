@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_food_products" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.food.products</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="40"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <app data-string="Hotel Management" id="hotel_management" string="Hotel Management"
+                         name="hotel_management" logo="tk_hotel_management/static/description/icon.png">
+                        <block title="Select Meal Products" id="select_food_products">
+                            <setting
+                                    help="Select product for included breakfast to add it in extra services.">
+                                <field name="breakfast_product" class="ms-2 oe_inline"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                            <setting
+                                    help="Select product for included lunch to add it in extra services.">
+                                <field name="lunch_product" class="ms-2 oe_inline"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                            <setting
+                                    help="Select product for included dinner to add it in extra services.">
+                                <field name="dinner_product" class="ms-2 oe_inline"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                        </block>
+                        <block title="Back Date Check-in">
+                            <setting help="Allow back date check-in.">
+                                <field name="back_date_check_in"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                        </block>
+                        <block title="Discount">
+                            <setting help="Select Discount Product">
+                                <field name="discount_product_id" class="ms-2 oe_inline"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                        </block>
+                        <block title="Housekeeping">
+                            <setting help="Select Housekeeping Project">
+                                <field name="housekeeping_project_id" class="ms-2 oe_inline"
+                                       style="width: 10%; min-width: 4rem;"/>
+                            </setting>
+                        </block>
+                    </app>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--Copyright 2024-Today TechKhedut.-->
+<!--Part of TechKhedut. See LICENSE file for full copyright and licensing details.-->
+
+<odoo>
+    <record id="book_rooms_wizard_view_form" model="ir.ui.view">
+        <field name="name">book.rooms.wizard.view.form</field>
+        <field name="model">book.room.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <div class="row my-1" invisible="not alert_message">
+                    <div class="col-12">
+                        <div class="alert alert-warning py-2 text-center" role="alert">
+                            <field name="alert_message" class="w-100" readonly="1"/>
+                        </div>
+                    </div>
+                </div>
+                <group string="Check-in / Check-out">
+                    <group>
+                        <field name="check_in_date" required="1"/>
+                    </group>
+                    <group>
+                        <field name="check_out_date" required="1"/>
+                    </group>
+                </group>
+                <group string="Room Details">
+                    <group>
+                        <field name="room_type_ids" widget="many2many_tags" required="1" options="{'no_create': True}"/>
+                        <field name="adults_count" required="1"/>
+                        <field name="children_count" required="1"/>
+                    </group>
+                    <group>
+                        <field name="booked_room_ids" invisible="1"/>
+                        <field name="room_ids" widget="many2many_tags" required="1" options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Book Rooms" name="action_create_hotel_room_bookings" type="object"
+                            class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="book_room_wizard_action" model="ir.actions.act_window">
+        <field name="name">Book Rooms</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">book.room.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">
+            {'default_hotel_booking_id': active_id}
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hotel_laundry_service_form_view" model="ir.ui.view">
+        <field name="name">hotel.laundry.service.form.view</field>
+        <field name="model">laundry.service</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="stages" widget="statusbar"/>
+                    <button string="In Progress" name="confirm_to_send_laundry" type="object"
+                            invisible="stages not in ['Request']"/>
+                    <button string="Completed" name="laundry_to_done" type="object"
+                            invisible="stages not in ['In Progress']"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="laundry_service_number"/>
+                    </h1>
+                    <group>
+                        <group string="Customer Details">
+                            <field name="booking_id" string="Booking Number" required="1"
+                                   readonly="stages == 'Completed'"/>
+                            <field name="customer_id"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="room_ids" invisible="1"/>
+                            <field name="room_id" readonly="stages == 'Completed'" options="{'no_create': True}"/>
+                        </group>
+                        <group string="Date Details">
+                            <field name="create_date" invisible="not deadline_date"/>
+                            <field name="deadline_date" readonly="stages == 'Completed'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Laundry Details">
+                            <field name="service_name_id" readonly="stages == 'Completed'"/>
+                            <field name="laundry_item_ids" widget="many2many_tags" options="{'color_field': 'color'}"
+                                   readonly="stages == 'Completed'"/>
+                            <field name="quantity" readonly="stages == 'Completed'"/>
+                            <label for="charges" class="mt-1" string="Charges"/>
+                            <div name="charges">
+                                <field name="charges" class="oe_inline"/>
+                                / Quantity
+                            </div>
+                        </group>
+                        <group string="Charges Details">
+                            <field name="total_charges"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Responsible ">
+                            <field name="responsible_id" readonly="stages == 'Completed'"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_laundry_service_search_view" model="ir.ui.view">
+        <field name="name">hotel.laundry.service.search.view</field>
+        <field name="model">laundry.service</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="laundry_service_number"/>
+                <field name="booking_id"/>
+                <field name="customer_id"/>
+                <field name="room_id"/>
+                <field name="service_name_id"/>
+                <field name="create_date"/>
+                <field name="deadline_date"/>
+                <field name="responsible_id"/>
+                <field name="laundry_item_ids"/>
+                <field name="charges"/>
+                <field name="quantity"/>
+                <field name="total_charges"/>
+
+                <filter name="request" string="Request" domain="[('stages', '=', 'Request')]"/>
+                <filter name="in_progress" string="In Progress" domain="[('stages', '=', 'In Progress')]"/>
+                <filter name="completed" string="Completed" domain="[('stages', '=', 'Completed')]"/>
+                <separator/>
+                <filter name="create_date" string="Create Date" date="create_date"/>
+
+                <group string="Group By">
+                    <separator/>
+                    <filter name="booking_id" string="Booking"
+                            context="{'group_by':'booking_id' }"
+                    />
+                    <filter name="customer_id" string="Customer"
+                            context="{'group_by':'customer_id' }"
+                    />
+                    <filter name="room_id" string="Room"
+                            context="{'group_by':'room_id' }"
+                    />
+                    <separator/>
+                    <filter name="service_name_id" string="Service Name"
+                            context="{'group_by':'service_name_id' }"
+                    />
+                    <separator/>
+                    <filter name="create_date" string="Create Date"
+                            context="{'group_by':'create_date' }"
+                    />
+                    <filter name="deadline_date" string="Deadline Date"
+                            context="{'group_by':'deadline_date' }"
+                    />
+                    <separator/>
+                    <filter name="responsible_id" string="Responsible"
+                            context="{'group_by':'responsible_id' }"
+                    />
+                    <separator/>
+                    <filter name="stages" string="Status"
+                            context="{'group_by':'stages' }"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_laundry_service_list_view" model="ir.ui.view">
+        <field name="name">hotel.laundry.service.list.view</field>
+        <field name="model">laundry.service</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="laundry_service_number" string="Service Number"/>
+                <field name="booking_id" string="Booking Number"/>
+                <field name="customer_id"/>
+                <field name="room_id" options="{'no_create': True}"/>
+                <field name="service_name_id"/>
+                <field name="create_date"/>
+                <field name="deadline_date"/>
+                <field name="responsible_id"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="laundry_item_ids" widget="many2many_tags"/>
+                <field name="charges" string="Charges / Quantity"/>
+                <field name="quantity"/>
+                <field name="total_charges"/>
+                <field name="stages" widget="badge"
+                       decoration-success="stages=='Request'"
+                       decoration-info="stages=='Completed'" string="Status"/>
+            </list>
+        </field>
+    </record>
+    <record id="hotel_laundry_service_action" model="ir.actions.act_window">
+        <field name="name">Laundry Services</field>
+        <field name="res_model">laundry.service</field>
+        <field name="view_mode">list,form,activity</field>
+    </record>
+</odoo>

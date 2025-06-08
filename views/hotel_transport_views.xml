@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hotel_transport_form_view" model="ir.ui.view">
+        <field name="name">hotel.transport.form.view</field>
+        <field name="model">hotel.transport</field>
+        <field name="arch" type="xml">
+            <form>
+
+                <header>
+                    <field name="stage" widget="statusbar" nolabel="1"
+                        statusbar_visible="pending,complete" />
+                    <button name="action_complete" type="object" invisible="stage != 'pending'"
+                        class="btn btn-outline-success" string="Complete Ride" />
+                    <button name="action_cancel" type="object" invisible="stage != 'pending'"
+                        class="btn btn-outline-danger" string="Cancel Ride" />
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="transport_number" />
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="booking_id" string="Booking Number" required="1"
+                                readonly="stage == 'complete'" options="{'no_create': True}" />
+                            <field name="customer_id" />
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Pickup or Drop Details">
+                            <field name="transport_type" widget="radio"
+                                options="{'horizontal': true}"
+                                readonly="stage == 'complete'" />
+                            <field name="time" readonly="stage == 'complete'" />
+                            <field name="end_time" required="1" readonly="stage == 'complete'" />
+                            <field name="unavailable_vehicle_ids" invisible="1" />
+                            <field name="unavailable_driver_ids" invisible="1" />
+                            <span class="o_form_label o_td_label" name="address_name">
+                                <b>Address</b>
+                            </span>
+                            <div class="o_address_format">
+                                <field name="location" placeholder="Location..."
+                                    class="o_address_street"
+                                    readonly="stage == 'complete'" />
+                                <field name="street" placeholder="Street..."
+                                    class="o_address_street"
+                                    readonly="stage == 'complete'" />
+                                <field name="street2" placeholder="Street 2..."
+                                    class="o_address_street"
+                                    readonly="stage == 'complete'" />
+                                <field name="city" placeholder="City" class="o_address_city"
+                                    readonly="stage == 'complete'" />
+                            </div>
+                            <field name="km" readonly="stage == 'complete'" />
+                        </group>
+                        <group string="Vehicle Details">
+                            <field name="driver_id" readonly="stage == 'complete'"
+                                options="{'no_create': True}" required="1" />
+                            <field name="transport_mode_id" readonly="stage == 'complete'"
+                                required="1"
+                                options="{'no_create': True}" />
+                            <field name="currency_id" invisible="1" />
+                            <label for="charges" class="mt-1" string="Charges" />
+                            <div name="charge">
+                                <field name="charges" class="oe_inline" /> / KM </div>
+                            <field name="total_charges" string="Total Charges" />
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_transport_calendar_view" model="ir.ui.view">
+        <field name="name">hotel.transport.calendar.view</field>
+        <field name="model">hotel.transport</field>
+        <field name="arch" type="xml">
+            <calendar date_start="time" mode="month" quick_create="False"
+                hide_time="True" event_open_popup="True" color="booking_id">
+                <field name="booking_id" />
+                <field name="customer_id" />
+            </calendar>
+        </field>
+    </record>
+    <record id="hotel_transport_search_view" model="ir.ui.view">
+        <field name="name">hotel.transport.search.view</field>
+        <field name="model">hotel.transport</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="transport_number" />
+                <field name="booking_id" />
+                <field name="customer_id" />
+                <field name="create_date" />
+                <field name="transport_mode_id" />
+                <field name="transport_type" />
+                <field name="driver_id" />
+                <field name="city" />
+                <group string="Group By">
+                    <filter name="pending" string="Pending" domain="[('stage', '=', 'pending')]" />
+                    <filter name="complete" string="Complete" domain="[('stage', '=', 'complete')]" />
+                    <filter name="cancel" string="Cancel" domain="[('stage', '=', 'cancel')]" />
+                    <separator />
+                    <filter name="create_date" string="Create Date" date="create_date" />
+                    <separator />
+                    <filter name="pickup" string="Pickup"
+                        domain="[('transport_type', '=', 'Pickup')]" />
+                    <filter name="drop" string="Drop" domain="[('transport_type', '=', 'Drop')]" />
+                    <separator />
+
+                    <filter name="booking" string="Booking"
+                        context="{'group_by':'booking_id' }"
+                    />
+                    <filter name="customer" string="Customer"
+                        context="{'group_by':'customer_id' }"
+                    />
+                    <separator />
+                    <filter name="create_date" string="Crate Date "
+                        context="{'group_by':'create_date' }"
+                    />
+                    <separator />
+                    <filter name="transport_mode_id" string="Vehicle"
+                        context="{'group_by':'transport_mode_id' }"
+                    />
+                    <separator />
+                    <filter name="transport_type" string="Transport Types"
+                        context="{'group_by':'transport_type' }"
+                    />
+                    <separator />
+                    <filter name="status" string="Status" context="{'group_by': 'stage'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_transport_list_view" model="ir.ui.view">
+        <field name="name">hotel.transport.list.view</field>
+        <field name="model">hotel.transport</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="transport_number" />
+                <field name="booking_id" string="Booking Number" />
+                <field name="customer_id" />
+                <field name="create_date" />
+                <field name="transport_type" />
+                <field name="time" />
+                <field name="transport_mode_id" />
+                <field name="driver_id" />
+                <field name="currency_id" column_invisible="1" />
+                <field name="charges" string="Charges / Km" />
+                <field name="km" />
+                <field name="total_charges" string="Total Charges" />
+                <field name="stage" widget="badge" decoration-warning="stage == 'pending'"
+                    decoration-success="stage == 'complete'" decoration-danger="stage == 'cancel'"
+                    string="Status" />
+            </list>
+        </field>
+    </record>
+    <record id="hotel_transport_action" model="ir.actions.act_window">
+        <field name="name">Transports Services</field>
+        <field name="res_model">hotel.transport</field>
+        <field name="view_mode">list,form,calendar,activity</field>
+    </record>
+
+</odoo>

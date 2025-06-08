@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hotel_transport_driver_form_view" model="ir.ui.view">
+        <field name="name">hotel.transport.driver.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_driver"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="hotel_transport_driver_action" model="ir.actions.act_window">
+        <field name="name">Drivers</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('is_driver','=',True)]</field>
+        <field name="context">{'default_is_driver':True}</field>
+    </record>
+</odoo>

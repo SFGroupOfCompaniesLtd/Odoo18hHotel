@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hotel_booking_form_view" model="ir.ui.view">
+        <field name="name">hotel.booking.form.view</field>
+        <field name="model">hotel.booking</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="id" invisible="1"/>
+                    <field name="stages" widget="statusbar"
+                           statusbar_visible="Draft,Confirm,Complete,check_in"/>
+                    <button name="%(book_room_wizard_action)d" type="action" string="Add Rooms"
+                            context="{'active_id': id}" invisible="stages != 'Draft'"
+                            class="oe_highlight"/>
+                    <button name="action_draft" type="object" string="Draft"
+                            invisible="stages != 'Complete' or payment_state in ['in_payment', 'paid', 'partial']"
+                            groups="tk_hotel_management.hotel_manager"/>
+                    <button string="Confirm" name="draft_to_confirm" type="object"
+                            class="btn btn-outline-success"
+                            invisible="stages not in ['Draft'] or not id"/>
+                    <button name="%(room_change_action)d" type="action" string="Room Change"
+                            invisible="stages in ['Cancel','Draft','Complete']"/>
+                    <button string="Check-in" name="action_check_in" type="object"
+                            class="btn btn-outline-primary"
+                            invisible="stages in ['Draft','Complete','Cancel','check_in']"/>
+                    <button string="Check-out" name="%(booking_invoice_action)d" type="action"
+                            class="btn btn-outline-info"
+                            invisible="stages != 'check_in'"/>
+                    <button string="Cancel" name="%(room_cancellation_action)d" type="action"
+                            class="btn btn-outline-danger"
+                            context="{'hall_cancel':False}"
+                            invisible="stages in ['Cancel','Draft','Complete','check_in']"/>
+                    <button name="%(add_extra_people_action)d" type="action"
+                            string="Add Extra Person Charges"
+                            invisible="stages not in ['Draft', 'Confirm']" class="btn btn-primary"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_order"
+                                icon="fa-cutlery">
+                            <field string="Restaurant Orders" name="order_count" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" type="object" name="action_view_housekeeping_tasks"
+                                icon="fa-tasks" invisible="housekeeping_task_count == 0">
+                            <field string="Tasks" name="housekeeping_task_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <h1>
+                        <field name="booking_number" string="Customer"/>
+                        <field name="id" invisible="1"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="customer_id" readonly="stages == 'Complete'"/>
+                            <field name="create_date" invisible="not create_date"
+                                   string="Booking Date"/>
+                        </group>
+                        <group>
+                            <field name="is_advance" widget="boolean_toggle"
+                                   readonly="stages != 'Draft'"/>
+                        </group>
+                    </group>
+                    <group string="Agent Details">
+                        <group>
+                            <field name="is_any_agent" widget="boolean_toggle"
+                                   readonly="stages == 'Complete'"/>
+                            <field name="agent_id" invisible="not is_any_agent"
+                                   required="is_any_agent"
+                                   readonly="stages == 'Complete'"
+                                   options="{'no_create': True}"
+                            />
+                        </group>
+                        <group>
+                            <field name="agent_commission_type" widget="radio"
+                                   options="{'horizontal':True}"
+                                   invisible="not is_any_agent" required="is_any_agent"
+                                   readonly="stages == 'Complete'"/>
+                            <field name="percentage"
+                                   invisible="agent_commission_type != 'percentage' or not is_any_agent"
+                                   required="agent_commission_type == 'percentage'"
+                                   readonly="stages == 'Complete'"/>
+                            <field name="agent_percentage_commission"
+                                   invisible="agent_commission_type != 'percentage' or not is_any_agent"
+                                   readonly="stages == 'Complete'"/>
+                            <field name="agent_commission"
+                                   invisible="agent_commission_type != 'fix' or not is_any_agent"
+                                   required="agent_commission_type == 'fix'"
+                                   readonly="stages == 'Complete'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Room Details">
+                            <field name="no_of_room"/>
+                            <field name="adults" readonly="stages != 'Draft'"/>
+                            <field name="children" readonly="stages != 'Draft'"/>
+                        </group>
+                        <group string="Amount Details"
+                               invisible="not invoice_id and not agent_bill_id">
+                            <label for="invoice_id" class="mt-1" invisible="not invoice_id"/>
+                            <div name="invoice_id">
+                                <field name="invoice_id" readonly="1" class="oe_inline"
+                                       force_save="1"
+                                       style="width:65%;" invisible="not invoice_id"/>
+                                <field name="payment_state" invisible="not invoice_id"
+                                       widget="badge" style="margin-left: 10px;width:35%;"
+                                       decoration-success="payment_state=='paid'"
+                                       decoration-danger="payment_state=='not_paid'"
+                                       decoration-info="payment_state=='in_payment'"
+                                       decoration-primary="payment_state=='partial'"
+                                       decoration-warning="payment_state=='reversed'"/>
+                            </div>
+                            <label for="agent_bill_id" class="mt-1" invisible="not agent_bill_id"/>
+                            <div name="agent_bill_id">
+                                <field name="agent_bill_id" readonly="1" class="oe_inline"
+                                       force_save="1"
+                                       invisible="not agent_bill_id" style="width:65%;"/>
+                                <field name="agent_payment_state" invisible="not agent_bill_id"
+                                       widget="badge" style="margin-left: 10px;width:35%;"
+                                       decoration-success="agent_payment_state=='paid'"
+                                       decoration-danger="agent_payment_state=='not_paid'"
+                                       decoration-info="agent_payment_state=='in_payment'"
+                                       decoration-primary="agent_payment_state=='partial'"
+                                       decoration-warning="agent_payment_state=='reversed'"/>
+                            </div>
+                        </group>
+                    </group>
+                    <group string="Food Included">
+                        <group>
+                            <field name="is_breakfast_included" widget="boolean_toggle"
+                                   readonly="stages != 'Draft'"/>
+                            <field name="is_lunch_included" widget="boolean_toggle"
+                                   readonly="stages != 'Draft'"/>
+                            <field name="is_dinner_included" widget="boolean_toggle"
+                                   readonly="stages != 'Draft'"/>
+                        </group>
+                        <group>
+                            <field name="breakfast_charge" invisible="not is_breakfast_included"
+                                   required="is_breakfast_included" readonly="stages != 'Draft'"/>
+                            <field name="lunch_charge" invisible="not is_lunch_included"
+                                   required="is_lunch_included"
+                                   readonly="stages != 'Draft'"/>
+                            <field name="dinner_charge" invisible="not is_dinner_included"
+                                   required="is_dinner_included" readonly="stages != 'Draft'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="responsible"
+                                   readonly="stages == 'Complete'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Discount Details">
+                            <field name="is_any_discount"
+                                   readonly="stages in ['Complete', 'Cancel']"/>
+                            <field name="discount_type" invisible="not is_any_discount"
+                                   required="is_any_discount"
+                                   readonly="stages in ['Complete', 'Cancel']"/>
+                            <field name="discount_val" invisible="not is_any_discount"
+                                   readonly="stages in ['Complete', 'Cancel']"/>
+
+                        </group>
+                        <group string="others">
+                            <field name="is_manual" string="Is Manual Restaurant Service ?"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Rooms">
+                            <group>
+                                <group>
+                                    <field name="invoice_payment_type" widget="radio"
+                                           options="{'horizontal':True}"
+                                           invisible="0"
+                                           readonly="stages == 'Complete' or invoice_id or room_night_invoice_ids"/>
+                                </group>
+                            </group>
+                            <field name="room_ids"
+                                   readonly="stages in ['Complete', 'Confirm', 'check_in']">
+                                <form create="false">
+                                    <header>
+                                        <field name="stages" widget="statusbar"
+                                               statusbar_visible="Available,Booked"/>
+                                    </header>
+                                    <group string="Check-in / Check-out">
+                                        <group>
+                                            <field name="check_in" required="1"/>
+                                        </group>
+                                        <group>
+                                            <field name="check_out" required="1"/>
+                                        </group>
+                                    </group>
+                                    <group string="Room Details">
+                                        <group>
+                                            <field name="room_ids" widget="many2many_tags"
+                                                   invisible="1"/>
+                                            <field name="room_id"
+                                                   readonly="stages in ['Booked','Maintenance']"
+                                                   options="{'no_create': True}"/>
+                                            <field name="room_capacity"/>
+                                            <field name="total_price"/>
+                                        </group>
+                                        <group>
+                                            <field name="currency_id" invisible="1"/>
+                                            <field name="days"/>
+                                            <label for="price" class="mt-1" string="Charge"
+                                                   invisible="1"/>
+                                            <div name="price" invisible="1">
+                                                <field name="price" class="oe_inline"/>
+                                                Per Night
+                                            </div>
+                                            <label for="charges_per_night" class="mt-1"
+                                                   string="Charges"/>
+                                            <div name="charges_per_night">
+                                                <field name="charges_per_night" class="oe_inline"
+                                                       readonly="1"
+                                                       force_save="1"/>
+                                                / Night
+                                            </div>
+                                            <field name="tax_ids" widget="many2many_tags"/>
+                                        </group>
+                                    </group>
+                                    <group>
+                                    </group>
+                                </form>
+                                <list create="false">
+                                    <field name="check_in"/>
+                                    <field name="check_out"/>
+                                    <field name="days"/>
+                                    <field name="room_id" string="Room"
+                                           options="{'no_create': True}"/>
+                                    <field name="room_capacity"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="price" string="Charges" column_invisible="1"/>
+                                    <field name="charges_per_night" string="Charges / Night"/>
+                                    <field name="tax_ids" widget="many2many_tags"/>
+                                    <field name="total_price"/>
+                                    <field name="stages" string="Status" widget="badge"
+                                           decoration-success="stages=='Available'"
+                                           decoration-danger="stages=='Booked'"
+                                           decoration-info="stages=='Maintenance'"/>
+                                </list>
+                            </field>
+                            <h6 invisible="invoice_payment_type != 'by_night'">
+                                Room Invoices
+                            </h6>
+                            <field name="room_night_invoice_ids"
+                                   invisible="invoice_payment_type != 'by_night'">
+                                <form>
+                                    <group>
+                                        <group>
+                                            <field name="room_id" readonly="1" force_save="1"/>
+                                            <field name="date" readonly="1" force_save="1"/>
+                                        </group>
+                                        <group>
+                                            <field name="amount" readonly="1" force_save="1"/>
+                                            <field name="invoice_id" readonly="1" force_save="1"/>
+                                        </group>
+                                    </group>
+                                </form>
+                                <list create="false">
+                                    <field name="room_id" options="{'no_create': True}"/>
+                                    <field name="date"/>
+                                    <field name="amount"/>
+                                    <field name="invoice_id"/>
+                                    <field name="invoice_due"/>
+                                    <field name="payment_state" widget="badge"
+                                           decoration-success="payment_state=='paid'"
+                                           decoration-danger="payment_state=='not_paid'"
+                                           decoration-info="payment_state=='in_payment'"
+                                           decoration-primary="payment_state=='partial'"
+                                           decoration-warning="payment_state=='reversed'"/>
+                                </list>
+                            </field>
+
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="room_total_charges"/>
+                                    <field name="advance_amount" invisible="not is_advance"
+                                           readonly="1"/>
+                                    <field name="total_night_invoice" invisible="1"/>
+                                    <field name="total_night_invoice_due" invisible="1"/>
+                                    <field name="discount_amount" invisible="not is_any_discount"/>
+                                    <field name="total_amount" string="Total Untaxed Amount"/>
+                                    <field name="payable_due" widget="badge"
+                                           string="Total Payable Due"
+                                           decoration-danger="payable_due" invisible="payable_due == 0"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Proof Details" invisible="stages in ['Draft','Cancel']">
+                            <field name="proof_ids" readonly="stages == 'Complete'">
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group string="Customer Details">
+                                                <field name="person_Id"/>
+                                            </group>
+                                            <group string="Document Details">
+                                                <field name="id_name"/>
+                                                <field name="id_number"/>
+                                                <field name="file_name" invisible="1"/>
+                                                <field name="document" filename="file_name"
+                                                       widget="binary"/>
+                                            </group>
+                                        </group>
+                                    </sheet>
+                                </form>
+                                <list>
+                                    <field name="person_Id"/>
+                                    <field name="id_name"/>
+                                    <field name="id_number"/>
+                                    <field name="file_name" column_invisible="1"/>
+                                    <field name="document" filename="file_name" widget="binary"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Advance Payment" invisible="not is_advance">
+                            <group>
+                                <group>
+                                    <field name="journal_id" required="is_advance"
+                                           readonly="stages == 'Complete'"/>
+                                </group>
+                                <group>
+                                    <field name="advance_amount" required="is_advance"
+                                           readonly="stages in ['Confirm','check_in','Complete']"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Transport Services" invisible="stages  in ['Cancel', 'Draft']">
+                            <field name="transport_ids" readonly="stages == 'Complete'">
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <group>
+                                                <field name="transport_type" widget="radio"
+                                                       options="{'horizontal': true}"/>
+                                            </group>
+                                        </group>
+                                        <group string="Pickup / Drop Details">
+                                            <group>
+                                                <field name="time"/>
+                                                <field name="end_time" required="1"/>
+                                                <field name="unavailable_vehicle_ids" invisible="1"/>
+                                                <field name="unavailable_driver_ids" invisible="1"/>
+                                                <field name="km"/>
+                                            </group>
+                                            <group>
+                                                <span class="o_form_label o_td_label"
+                                                      name="address_name">
+                                                    <b>Address</b>
+                                                </span>
+                                                <div class="o_address_format">
+                                                    <field name="location" placeholder="Location..."
+                                                           class="o_address_street"/>
+                                                    <field name="street" placeholder="Street..."
+                                                           class="o_address_street"/>
+                                                    <field name="street2" placeholder="Street 2..."
+                                                           class="o_address_street"/>
+                                                    <field name="city" placeholder="City"/>
+                                                </div>
+                                            </group>
+                                        </group>
+                                        <group string="Vehicle Details">
+                                            <group>
+                                                <field name="transport_mode_id"/>
+                                                <field name="currency_id" invisible="1"/>
+                                                <label for="charges" class="mt-1" string="Charges"/>
+                                                <div name="charge">
+                                                    <field name="charges" class="oe_inline"/>
+                                                    / KM
+                                                </div>
+                                            </group>
+                                            <group>
+                                                <field name="driver_id"
+                                                       options="{'no_create': True}"/>
+                                                <field name="total_charges" string="Total Charges"/>
+                                            </group>
+                                        </group>
+                                    </sheet>
+                                </form>
+                                <kanban>
+                                    <templates>
+                                        <t t-name="card">
+                                            <div class="oe_kanban_global_click"
+                                                 style="width: 21rem; list-style:none;height:185px;">
+                                                <div class="row">
+                                                    <div class="col-4">Type :</div>
+                                                    <div class="col-8 fw-bold">
+                                                        <field name="transport_type"/>
+                                                    </div>
+
+                                                    <div class="col-4">Total KM :</div>
+                                                    <div class="col-8 fw-bold">
+                                                        <field name="km"/>
+                                                    </div>
+
+                                                    <div class="col-4">Date Time :</div>
+                                                    <div class="col-7 fw-bold">
+                                                        <field name="time"/>
+                                                    </div>
+
+                                                    <div class="col-4">Driver :</div>
+                                                    <div class="col-7 fw-bold">
+                                                        <field name="driver_id"/>
+                                                    </div>
+
+                                                    <div class="col-4">Vehicle :</div>
+                                                    <div class="col-7 fw-bold">
+                                                        <field name="transport_mode_id"/>
+                                                    </div>
+                                                    <div class="col-4">Charges :</div>
+                                                    <div class="col-7 fw-bold">
+                                                        <field name="currency_id" invisible="1"/>
+                                                        <field name="total_charges"/>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8">
+                                                        <field name="stage" invisible="1"/>
+                                                        <button name="action_complete" type="object"
+                                                                class="btn btn-outline-success m-2 ms-0 w-50"
+                                                                string="Complete"
+                                                                invisible="stage != 'pending'">
+                                                            Complete
+                                                        </button>
+                                                        <button name="action_cancel" type="object"
+                                                                class="btn btn-outline-danger"
+                                                                string="Cancel"
+                                                                style="width: 70px; height: 20px; margin-top: 15px;padding:0px;margin-left:5px;"
+                                                                invisible="stage != 'pending'">Cancel
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-4 text-end">
+                                                        <span>
+                                                            <field name="stage"
+                                                                   widget="label_selection"
+                                                                   options="{'classes': {'pending': 'info', 'complete': 'success','cancel': 'danger'}}"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="transport_total_charges"/>
+                                    <field name="total_amount" string="Total Untaxed Amount"/>
+                                    <field name="payable_due" widget="badge"
+                                           string="Total Payable Due"
+                                           decoration-danger="payable_due"
+                                           invisible="payment_state == 'paid'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Laundry Services" invisible="stages in ['Draft','Cancel']">
+                            <field name="laundry_ids" context="{'booking_id':id}"
+                                   readonly="stages == 'Complete'">
+                                <form>
+                                    <header>
+                                        <field name="stages" widget="statusbar"/>
+                                        <field name="booking_id" invisible="1"/>
+                                    </header>
+                                    <group>
+                                        <group>
+                                            <field name="room_ids" invisible="1"/>
+                                            <field name="room_id" options="{'no_create': True}"/>
+                                        </group>
+                                        <group>
+                                            <field name="responsible_id"/>
+                                        </group>
+                                    </group>
+                                    <group string="Laundry Details">
+                                        <group>
+                                            <field name="service_name_id" string="Service"/>
+                                            <field name="laundry_item_ids" widget="many2many_tags"/>
+                                            <field name="quantity"/>
+                                        </group>
+                                        <group>
+                                            <field name="create_date" invisible="not deadline_date"/>
+                                            <field name="deadline_date"/>
+                                            <field name="currency_id" invisible="1"/>
+                                            <label for="charges" class="mt-1" string="Charges"/>
+                                            <div name="charges" class="oe-inline">
+                                                <field name="charges" class="oe_inline"/>
+                                                /
+                                                Quantity
+                                            </div>
+                                            <field name="total_charges"/>
+                                        </group>
+                                    </group>
+                                </form>
+                                <list>
+                                    <field name="booking_id" column_invisible="1"/>
+                                    <field name="service_name_id"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="room_id" options="{'no_create': True}"/>
+                                    <field name="responsible_id"/>
+                                    <field name="create_date"/>
+                                    <field name="deadline_date"/>
+                                    <field name="total_charges"/>
+                                    <field name="stages" widget="badge"
+                                           decoration-success="stages=='Request'"
+                                           decoration-info="stages=='Completed'" string="Status"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="laundry_total_charges"/>
+                                    <field name="total_amount" string="Total Untaxed Amount"/>
+                                    <field name="payable_due" widget="badge"
+                                           string="Total Payable Due"
+                                           decoration-danger="payable_due"
+                                           invisible="payment_state == 'paid'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Restaurant Services"
+                              invisible="stages in ['Draft','Cancel'] or not is_manual">
+                            <field name="restaurant_ids" context="{'booking_id':id}"
+                                   readonly="stages == 'Complete'">
+                                <form>
+                                    <header>
+                                        <field name="stages" widget="statusbar"/>
+                                    </header>
+                                    <sheet>
+                                        <h1>
+                                            <field name="reservation_number"/>
+                                        </h1>
+                                        <group>
+                                            <group>
+                                                <field name="room_ids" invisible="1"/>
+                                                <field name="is_booked" invisible="1"/>
+                                                <field name="is_free" invisible="1"/>
+                                                <field name="room_id" required="1"
+                                                       options="{'no_create': True}"/>
+                                                <field name="create_date" string="Order Date"
+                                                       invisible="not create_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="table_ids" invisible="1"/>
+                                                <label for="is_table_booking" class="mt-1"/>
+                                                <div name="is_table_booking">
+                                                    <field name="is_table_booking" class="oe_inline"/>
+                                                    <button name="book_tables"
+                                                            class="btn btn-outline-success"
+                                                            type="object"
+                                                            string="Book Table"
+                                                            style="margin-left:10px;"
+                                                            invisible="is_booked or not is_table_booking"/>
+                                                    <button name="free_tables"
+                                                            type="object"
+                                                            string="Free"
+                                                            class="btn btn-outline-info"
+                                                            style="margin-left:10px;"
+                                                            invisible="not is_table_booking or is_free or not is_booked"/>
+                                                </div>
+                                            </group>
+                                        </group>
+                                        <group>
+                                        </group>
+                                        <notebook>
+                                            <page string="Order List">
+                                                <field name="customer_foods_ids">
+                                                    <form>
+                                                        <header>
+                                                            <field name="stages" widget="statusbar"/>
+                                                        </header>
+                                                        <sheet>
+                                                            <group string="Food Details">
+                                                                <group>
+                                                                    <field name="food_included"/>
+                                                                    <field name="food_id"/>
+                                                                    <field name="currency_id"
+                                                                           invisible="1"/>
+                                                                    <label for="price" class="mt-1"
+                                                                           string="Price"
+                                                                           invisible="food_included"/>
+                                                                    <div name="price"
+                                                                         invisible="food_included">
+                                                                        <field name="price"
+                                                                               invisible="food_included"/>
+                                                                        Per Quantity
+                                                                    </div>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="quantity"
+                                                                           invisible="food_included"/>
+                                                                    <field name="subtotal_amount"/>
+                                                                </group>
+                                                            </group>
+                                                        </sheet>
+                                                    </form>
+                                                    <list>
+                                                        <field name="food_included"/>
+                                                        <field name="food_id" string="Foods"/>
+                                                        <field name="currency_id"
+                                                               column_invisible="1"/>
+                                                        <field name="price"/>
+                                                        <field name="quantity"/>
+                                                        <field name="subtotal_amount"/>
+                                                        <field name="stages" widget="badge"
+                                                               decoration-success="stages=='Confirm'"
+                                                               decoration-info="stages=='Prepared'"
+                                                               string="Status"/>
+                                                    </list>
+                                                </field>
+                                            </page>
+                                            <page string="Table Reservation" invisible="1">
+                                                <group>
+                                                    <group>
+                                                        <field name="res_start"/>
+                                                    </group>
+                                                    <group>
+                                                        <field name="res_end"/>
+                                                    </group>
+                                                </group>
+                                                <group string="Table Details">
+                                                    <group>
+                                                        <label for="table_id" class="mt-1"/>
+                                                        <div name="table_id"
+                                                             required="is_table_booking">
+                                                            <field name="table_id" class="oe_inline"
+                                                                   force_save="1"
+                                                                   style="width:auto;"/>
+                                                            <field name="table_stages"
+                                                                   invisible="not table_id"
+                                                                   widget="badge" style="width:auto;"
+                                                                   decoration-success="table_stages=='Available'"
+                                                                   decoration-warning="table_stages=='Booked'"/>
+                                                        </div>
+                                                        <field name="table_capacity"/>
+                                                    </group>
+                                                    <group>
+                                                        <field name="no_of_person"
+                                                               required="is_table_booking"/>
+                                                        <field name="table_charges"
+                                                               required="is_table_booking"/>
+                                                    </group>
+                                                </group>
+                                            </page>
+                                            <page string="Table Reservations"
+                                                  invisible="not is_table_booking">
+                                                <field name="table_booking_ids">
+                                                    <list editable="bottom">
+                                                        <field name="start_date"
+                                                               string="Reservation Start" required="1"/>
+                                                        <field name="end_date"
+                                                               string="Reservation End" required="1"/>
+                                                        <field name="table_id"/>
+                                                        <field name="table_ids" column_invisible="1"/>
+                                                        <field name="currency_id"
+                                                               column_invisible="1"/>
+                                                        <field name="table_capacity"/>
+                                                        <field name="no_of_person"/>
+                                                        <field name="reservation_charges"/>
+                                                        <field name="stage" widget="badge"
+                                                               decoration-success="stage == 'a'"
+                                                               decoration-danger="stage == 'b'"/>
+                                                    </list>
+                                                </field>
+                                            </page>
+                                        </notebook>
+                                    </sheet>
+                                </form>
+                                <list>
+                                    <field name="reservation_number"/>
+                                    <field name="room_id" options="{'no_create': True}"/>
+                                    <field name="create_date" string="Order Date"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <field name="total_charges"/>
+                                    <field name="stages" widget="badge"
+                                           decoration-success="stages=='Confirm'"
+                                           decoration-info="stages=='Delivered'" string="Status"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="restaurant_services_charges"/>
+                                    <field name="total_amount" string="Total Untaxed Amount"/>
+                                    <field name="payable_due" widget="badge"
+                                           string="Total Payable Due"
+                                           decoration-danger="payable_due"
+                                           invisible="payment_state == 'paid'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Extra Services" invisible="stages in ['Cancel']">
+                            <field name="service_ids" readonly="stages == 'Complete'">
+                                <list editable="top">
+                                    <field name="product_id" required="1"/>
+                                    <field name="service"/>
+                                    <field name="quantity"/>
+                                    <field name="amount"/>
+                                    <field name="all_amount" string="Sub Total" optional="show"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="all_service_amount"/>
+                                    <field name="total_amount" string="Total Untaxed Amount"/>
+                                    <field name="payable_due" widget="badge"
+                                           string="Total Payable Due"
+                                           decoration-danger="payable_due"
+                                           invisible="payment_state == 'paid'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Cancellation Charge" invisible="stages != 'Cancel'">
+                            <field name="cancels_invoice_id" invisible="1" force_save="1"/>
+                            <group>
+                                <group>
+                                    <field name="cancels_invoice_id"
+                                           invisible="not cancels_invoice_id" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="is_cancellation_charge" invisible="1"/>
+                                    <field name="cancellation_charge" readonly="1" forece_save="1"
+                                           invisible="not is_cancellation_charge"/>
+                                </group>
+                            </group>
+                            <group string="Cancellation Reason">
+                                <field name="cancellation_reason" readonly="1"/>
+                            </group>
+                        </page>
+
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_booking__calendar_view" model="ir.ui.view">
+        <field name="name">hotel.booking.calendar.view</field>
+        <field name="model">hotel.booking</field>
+        <field name="arch" type="xml">
+            <calendar date_start="create_date" mode="month" quick_create="False" hide_time="True"
+                      event_open_popup="True"
+                      color="booking_number">
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+            </calendar>
+        </field>
+    </record>
+    <record id="hotel_booking_search_view" model="ir.ui.view">
+        <field name="name">hotel.booking.search.view</field>
+        <field name="model">hotel.booking</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+                <field name="create_date"/>
+                <field name="no_of_room"/>
+                <field name="responsible"/>
+                <group string="Group By">
+                    <filter name="draft" string="Draft" domain="[('stages', '=', 'Draft')]"/>
+                    <filter name="confirm" string="Confirm" domain="[('stages', '=', 'Confirm')]"/>
+                    <filter name="check-in" string="Check-in" domain="[('stages', '=', 'check_in')]"/>
+                    <filter name="check-out" string="Check-out"
+                            domain="[('stages', '=', 'Complete')]"/>
+                    <filter name="cancel" string="Cancel" domain="[('stages', '=', 'Cancel')]"/>
+                    <separator/>
+                    <filter name="booking_date" string="Booking Date" date="create_date"/>
+                    <separator/>
+                    <filter name="create_date" string="Booking Date"
+                            context="{'group_by':'create_date' }"/>
+                    <separator/>
+                    <filter name="responsible" string="Responsible"
+                            context="{'group_by':'responsible'}"/>
+                    <separator/>
+                    <filter string="Customer" name="customer" domain="[]"
+                            context="{'group_by':'customer_id'}"/>
+                    <separator/>
+                    <filter string="Status" name="status" domain="[]"
+                            context="{'group_by':'stages'}"/>
+                </group>
+                <searchpanel>
+                    <field name="stages" string="Status" enable_counters="1" icon="fa-filter"
+                           select="multi"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_booking_list_view" model="ir.ui.view">
+        <field name="name">hotel.booking.list.view</field>
+        <field name="model">hotel.booking</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+                <field name="create_date" string="Booking Date"/>
+                <field name="no_of_room"/>
+                <field name="responsible"/>
+                <field name="stages" widget="badge" decoration-success="stages=='check_in'"
+                       decoration-primary="stages=='Confirm'" decoration-danger="stages=='Cancel'"
+                       decoration-info="stages=='Complete'" string="Status"/>
+            </list>
+        </field>
+    </record>
+    <record id="hotel_booking_action" model="ir.actions.act_window">
+        <field name="name">Room Bookings</field>
+        <field name="res_model">hotel.booking</field>
+        <field name="view_mode">list,form,calendar,activity</field>
+    </record>
+</odoo>

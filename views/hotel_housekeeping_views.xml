@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="hotel_housekeeping_form_view" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.form.view</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar"/>
+                    <button string="In Progress" name="assign_to_progress" type="object"
+                            invisible="state not in ['Assign']"/>
+                    <button string="Complete" name="dirty_to_clean" type="object"
+                            invisible="state not in ['In Progress']"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="housekeeping_number"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <span class="d-flex">
+                                <field name="is_room" readonly="is_hall or state == 'Complete'"/>
+                                <label for="is_room"/>
+                                <field name="is_hall" readonly="is_room or state == 'Complete'"/>
+                                <label for="is_hall"/>
+                            </span>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="start_datetime" readonly="state == 'Complete'"/>
+                        </group>
+                        <group>
+                            <field name="end_datetime" readonly="state == 'Complete'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="housekeeping_type" readonly="state == 'Complete'"/>
+                            <field name="room_id" invisible="not is_room" required="is_room"
+                                   readonly="state == 'Complete'" options="{'no_create': True}"/>
+                            <field name="hall_id" invisible="not is_hall" required="is_hall"
+                                   readonly="state == 'Complete'"/>
+                        </group>
+                        <group>
+                            <field name="housekeeper_ids" widget="many2many_tags" string="Housekeepers"
+                                   required="state == 'Assign'"
+                                   readonly="state == 'Complete'"/>
+                        </group>
+                    </group>
+                    <group string="Activity">
+                        <field name="desc" readonly="state == 'Complete'"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="hotel_housekeeping_search_view" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.search.view</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="housekeeping_number"/>
+                <field name="housekeeping_type"/>
+                <field name="room_id"/>
+                <field name="hall_id"/>
+                <field name="create_date"/>
+                <field name="housekeeper_ids"/>
+                <field name="start_datetime"/>
+                <field name="end_datetime"/>
+
+                <filter name="assign" string="Assign" domain="[('state', '=', 'Assign')]"/>
+                <filter name="in_progress" string="In Progress" domain="[('state', '=', 'In Progress')]"/>
+                <filter name="complete" string="Complete" domain="[('state', '=', 'Complete')]"/>
+                <separator/>
+                <filter name="create_date" string="Create Date" date="create_date"/>
+                <separator/>
+                <filter name="room" string="Rooms" domain="[('is_room', '=', True)]"/>
+                <filter name="halls" string="Halls" domain="[('is_hall', '=', True)]"/>
+
+                <group string="Group By">
+                    <separator/>
+                    <filter name="housekeeping_type" string="Housekeeping type "
+                            context="{'group_by':'housekeeping_type' }"/>
+                    <separator/>
+                    <filter name="create_date" string="Create date" context="{'group_by':'create_date' }"/>
+                    <separator/>
+                    <filter name="room" string="Room" context="{'group_by':'room_id' }"/>
+                    <filter name="hall" string="Hall" context="{'group_by':'hall_id' }"/>
+                    <separator/>
+                    <filter name="state" string="Status" context="{'group_by':'state' }"/>
+                    <separator/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_housekeeping_list_view" model="ir.ui.view">
+        <field name="name">hotel.housekeeping.list.view</field>
+        <field name="model">hotel.housekeeping</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="housekeeping_number"/>
+                <field name="housekeeping_type"/>
+                <field name="start_datetime"/>
+                <field name="housekeeper_ids" widget="many2many_tags" string="Housekeepers"/>
+                <field name="state" widget="badge" decoration-success="state=='Assign'"
+                       decoration-danger="state=='In Progress'" decoration-info="state=='Clean'" string="Status"/>
+            </list>
+        </field>
+    </record>
+    <record id="hotel_housekeeping_action" model="ir.actions.act_window">
+        <field name="name">Housekeeping Details</field>
+        <field name="res_model">hotel.housekeeping</field>
+        <field name="view_mode">list,form,activity</field>
+    </record>
+</odoo>

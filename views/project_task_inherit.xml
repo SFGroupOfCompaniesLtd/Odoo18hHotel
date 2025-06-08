@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hotel_project_task_form_view_inherit" model="ir.ui.view">
+            <field name="name">hotel.project.task.form.view.inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="start_date"/>
+                </xpath>
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_room_booking" type="object" class="oe_stat_button" icon="fa-bed"
+                            invisible="not room_booking_id"
+                            groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception">
+                        <div class="o_stat_info">
+                            <span class="o_stat_value">
+                            </span>
+                            <span class="o_stat_text">Room Booking</span>
+                        </div>
+                        <field name="room_booking_id" invisible="1"/>
+                    </button>
+                    <button name="action_view_hall_booking" type="object" class="oe_stat_button" icon="fa-gift"
+                            invisible="not hall_booking_id"
+                            groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception">
+                        <div class="o_stat_info">
+                            <span class="o_stat_value">
+                            </span>
+                            <span class="o_stat_text">Hall Booking</span>
+                        </div>
+                        <field name="hall_booking_id" invisible="1"/>
+                    </button>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="hotel_project_task_search_view_inherit" model="ir.ui.view">
+            <field name="name">hotel.project.task.search.view.inherit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form_base"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='last_stage_update']" position="after">
+                    <separator/>
+                    <filter name="room_booking_tasks" string="Room Bookings" context="{'group_by': 'room_booking_id'}"/>
+                    <filter name="hall_booking_tasks" string="Hall Bookings" context="{'group_by': 'hall_booking_id'}"/>
+                </xpath>
+
+                <xpath expr="//filter[@name='inactive']" position="after">
+                    <separator/>
+                    <filter name="filter_room_booking_tasks" string="Room Bookings"
+                            domain="[('room_booking_id', '!=', False)]"/>
+                    <filter name="filter_hall_booking_tasks" string="Hall Bookings"
+                            domain="[('hall_booking_id', '!=', False)]"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hotel_see_all_tasks_action" model="ir.actions.act_window">
+            <field name="name">Tasks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,list,form,calendar,pivot,graph,activity</field>
+        </record>
+        <record id="hotel_see_my_tasks_action" model="ir.actions.act_window">
+            <field name="name">My Tasks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">project.task</field>
+            <field name="domain">[('user_ids', 'in', uid)]</field>
+            <field name="view_mode">kanban,list,form,calendar,pivot,graph,activity</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,3402 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tk_hotel_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-14 04:11+0000\n"
+"PO-Revision-Date: 2023-08-14 04:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__transport_type
+msgid "Transport Type"
+msgstr "Type de transport"
+
+#. module: tk_hotel_management
+#: model:ir.actions.report,print_report_name:tk_hotel_management.booking_details_report_id
+msgid "'Booking Details'"
+msgstr "'Les détails de réservation'"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Address:</b>"
+msgstr "<b>Adresse:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Charges:</b>"
+msgstr "<b>Des charges:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Customer:</b>"
+msgstr "<b>Cliente:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Date Time:</b>"
+msgstr "<b>Date et heure :</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Driver:</b>"
+msgstr "<b>Conductrice:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Order Date</b>"
+msgstr "<b>Date de commande</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Reservation Number:</b>"
+msgstr "<b>Numéro de réservation:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Room No:</b>"
+msgstr "<b>Chambre numéro:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Status</b>"
+msgstr "<b>Statut</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "<b>Total Charges</b>"
+msgstr "<b>Charges totales</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Total KM :</b>"
+msgstr "<b>Kilométrage total :</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Transport Type:</b>"
+msgstr "<b>Type de transports :</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "<b>Vehicle:</b>"
+msgstr "<b>Véhicule:</b>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<br/>\n"
+"                                                    Room No."
+msgstr ""
+"<br/>\n"
+"                                                    Chambre numéro."
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                                    <b>Address</b>\n"
+"                                                </span>"
+msgstr ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                                    <b>Adresse</b>\n"
+"                                                </span>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_location_form_view
+msgid ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                <b>Address</b>\n"
+"                            </span>"
+msgstr ""
+"<span class=\"o_form_label o_td_label\" name=\"address_name\">\n"
+"                                <b>Adresse</b>\n"
+"                            </span>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<span>\n"
+"                                            <strong>\n"
+"                                                Breakfast\n"
+"                                                <br/>\n"
+"                                                Lunch\n"
+"                                                <br/>\n"
+"                                                Dinner\n"
+"                                            </strong>\n"
+"                                        </span>"
+msgstr ""
+"<span>\n"
+"                                            <strong>\n"
+"                                                Petit-déjeuner\n"
+"                                                <br/>\n"
+"                                                Déjeuner\n"
+"                                                <br/>\n"
+"                                                Dîner\n"
+"                                            </strong>\n"
+"                                        </span>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<span>\n"
+"                                        Booking Information\n"
+"                                    </span>"
+msgstr ""
+"<span>\n"
+"                                       Informations de réservation\n"
+"                                    </span>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                                Food\n"
+"                                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                                Nourriture\n"
+"                                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                                Food Included In Package\n"
+"                                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                                Nourriture incluse dans le forfait\n"
+"                                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                                Price\n"
+"                                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                                Prix\n"
+"                                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                                Qty.\n"
+"                                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                                Qté.\n"
+"                                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                                Subtotal\n"
+"                                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                                Total\n"
+"                                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Extra Services\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Services supplémentaires\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Laundry Service\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Service de blanchisserie\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Restaurant Service\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Services de restauration\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Total Laundry Charges\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Total des frais de blanchisserie\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Total Restaurant Charges\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Total des frais de restauration\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Total Service Charges\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Total des frais de service\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Total Transport Charges\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                               Frais de transport totaux\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                                Transport Services\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Services de transport\n"
+"                                            </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                            Room Details\n"
+"                                        </strong>"
+msgstr ""
+"<strong>\n"
+"                                            Détails de la chambre\n"
+"                                        </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"<strong>\n"
+"                                            Total Room Charges\n"
+"                                        </strong>"
+msgstr ""
+"<strong>\n"
+"                                            Total des frais de chambre\n"
+"                                        </strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Amount</strong>"
+msgstr "<strong>Montante</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Charge / Qty.</strong>"
+msgstr "<strong>Frais / Qté.</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Charge</strong>"
+msgstr "<strong>Charge</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Charges / Km</strong>"
+msgstr "<strong>Frais / km</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Check in</strong>"
+msgstr "<strong>Enregistrement</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Check out</strong>"
+msgstr "<strong>Vérifier</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Date</strong>"
+msgstr "<strong>Date</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "<strong>Invoice Details</strong>"
+msgstr "<strong>Détails de la facture</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Number Of Days</strong>"
+msgstr "<strong>Nombre de jours</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Qty.</strong>"
+msgstr "<strong>Qté.</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Room No:</strong>"
+msgstr "<strong>Chambre numéro:</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Service</strong>"
+msgstr "<strong>Service</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Time</strong>"
+msgstr "<strong>Temps</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Total Amount</strong>"
+msgstr "<strong>Montant total</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Total Charges</strong>"
+msgstr "<strong>Charges totales</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Total KM</strong>"
+msgstr "<strong>Kilométrage total</strong>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "<strong>Transport Type:</strong>"
+msgstr "<strong>Type de transports :</strong>"
+
+#. module: tk_hotel_management
+#: model:ir.module.category,description:tk_hotel_management.module_hotel_management
+msgid "Access rights for Hotel Management"
+msgstr "Droits d'accès pour la gestion hôtelière"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_needaction
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#, python-format
+msgid "Active Appointment"
+msgstr "Rendez-vous actif"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Active Hall Bookings"
+msgstr "Réservations de salles actives"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Active Room Bookings"
+msgstr "Réservations de chambres actives"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_form_view
+msgid "Activity"
+msgstr "Activité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_exception_decoration
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'exception d'activité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_state
+msgid "Activity State"
+msgstr "État d'activité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_type_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône du type d'activité"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "Adult"
+msgstr "Adulte"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__adults
+msgid "Adults"
+msgstr "Adults"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_advance
+msgid "Advance"
+msgstr "Avance"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__advance_amount
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__advance_amount
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Advance Amount"
+msgstr "Montant de l'avance"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"Advance Amount\n"
+"                                            <br/>"
+msgstr ""
+"Montant de l'avance\n"
+"                                            <br/>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Advance Payment"
+msgstr "Acompte"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_res_partner__is_agent
+#: model:ir.model.fields,field_description:tk_hotel_management.field_res_users__is_agent
+msgid "Agent"
+msgstr "Agente"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_bill_id
+msgid "Agent Bill"
+msgstr "Facture de l'agent"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__agent_commission
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Agent Commission"
+msgstr "Commission d'agent"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_agent_action
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Agent Details"
+msgstr "Détails de l'agent"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.agent_invoice_product_template
+msgid "Agent Invoice"
+msgstr "Facture de l'agent"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_agent
+msgid "Agents"
+msgstr "Agentes"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__amount
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__amount
+msgid "Amount"
+msgstr "Montante"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Amount Details"
+msgstr "Détails du montant"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__all_service_amount
+msgid "Amount Due"
+msgstr "Montant dû"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_any_agent
+msgid "Any Agent"
+msgstr "N'importe quel agent"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__is_deposit
+msgid "Any Deposit"
+msgstr "Tout dépôt"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_housekeeping__state__assign
+msgid "Assign"
+msgstr "Attribuer"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_attachment_count
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_hall_booking__stage__a
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_room_details__stages__available
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_table_booking__stage__a
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__table_details__stages__available
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_table_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+msgid "Available"
+msgstr "Disponible"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__avatar
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__avatar
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__avatar
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__avatar
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__avatar
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Avtar"
+msgstr "Avtar"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_table_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+msgid "Book"
+msgstr "Livre"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Book Table"
+msgstr "Tableau de livre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_hall_booking__stage__b
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_room_details__stages__booked
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_table_booking__stage__b
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__table_details__stages__booked
+msgid "Booked"
+msgstr "Réservée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__booking_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__booking_id
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_booking
+msgid "Booking"
+msgstr "Réservation"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_tree_view
+msgid "Booking Date"
+msgstr "Date de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_booking_action
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+msgid "Booking Details"
+msgstr "Les détails de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_booking_excel_report
+msgid "Booking Excel report"
+msgstr "Rapport Excel de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.booking_invoice_action
+msgid "Booking Invoice"
+msgstr "Facture de réservation"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"Booking No\n"
+"                                            <br/>"
+msgstr ""
+"Numéro de réservation\n"
+"                                            <br/>"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__booking_number
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__booking_number
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_order_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_tree_view
+msgid "Booking Number"
+msgstr "Numéro de réservation"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Booking Overview"
+msgstr "Aperçu de la réservation"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Booking Status"
+msgstr "Statut de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_breakfast_included
+msgid "Breakfast"
+msgstr "Petit-déjeuner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__breakfast_charge
+msgid "Breakfast Charges"
+msgstr "Frais de petit-déjeuner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__stages__cancel
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_feast__stages__cancel
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_transport__stage__cancel
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_excel_report_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.room_cancellation_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.room_change_form_view
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.room_cancellation_form_view
+msgid "Cancel Booking"
+msgstr "Annuler la réservation"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+msgid "Cancel Ride"
+msgstr "Annuler le trajet"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+msgid "Cancellation"
+msgstr "Annulation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_cancellation_charge
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__is_cancellation_charge
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__is_cancellation_charge
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Cancellation Charge"
+msgstr "Frais d'annulation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__cancellation_charge
+msgid "Cancellation Charges"
+msgstr "Frais d'annulation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__cancellation_reason
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__cancellation_reason
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__cancellation_reason
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.room_cancellation_form_view
+msgid "Cancellation Reason"
+msgstr "Motif d'annulation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__cancellation_charge
+msgid "Cancels Charges"
+msgstr "Annule les frais"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__table_capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__capacity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__capacity
+msgid "Capacity"
+msgstr "Capacité"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.room_change_form_view
+msgid "Change"
+msgstr "Changement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__charges
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__charges
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__charge
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__charges
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_vehicle_form_view
+msgid "Charge"
+msgstr "Charge"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__total_charges
+msgid "Charge"
+msgstr "Charge"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Charges Details"
+msgstr "Détails des frais"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Charges for"
+msgstr "Frais pour"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__check_in
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_excel_report_form_view
+#, python-format
+msgid "Check In"
+msgstr "Enregistrement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__check_in
+msgid "Check In Date"
+msgstr "Date d'arrivée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__check_out
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_excel_report_form_view
+msgid "Check Out"
+msgstr "Vérifier"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__check_out
+msgid "Check Out Date"
+msgstr "Date de départ"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_search_view
+msgid "Check in"
+msgstr "Enregistrement"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_search_view
+msgid "Check out"
+msgstr "Vérifier"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__check_in
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__check_in
+msgid "Check-In Date"
+msgstr "Date d'arrivée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__check_out
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__check_out
+msgid "Check-Out Date"
+msgstr "Date de départ"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__stages__check_in
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Check-in"
+msgstr "Enregistrement"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Check-in / Check-out"
+msgstr "Arrivée / Départ"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__stages__complete
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Check-out"
+msgstr "Vérifier"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__children
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "Children"
+msgstr "Enfants"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__city
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__city
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_location_form_view
+msgid "City"
+msgstr "Ville"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_housekeeping__housekeeping_type__cleaning
+msgid "Cleaning"
+msgstr "Nettoyage"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__color
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_commission
+msgid "Commission"
+msgstr "Commission"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_percentage_commission
+msgid "Commission"
+msgstr "Commission"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_commission_type
+msgid "Commission Type"
+msgstr "Type de commissions"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__company_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__company_id
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_feast__stages__complete
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_housekeeping__state__complete
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_transport__stage__complete
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_form_view
+msgid "Complete"
+msgstr "Complète"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+msgid "Complete Ride"
+msgstr "Tour complet"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__laundry_service__stages__completed
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Completed"
+msgstr "Complété"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration
+msgid "Configurations"
+msgstr "Configurations"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__customer_food_order__stages__confirm
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__stages__confirm
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_feast__stages__confirm
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_restaurant__stages__confirm
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_search_view
+msgid "Crate Date"
+msgstr "Date de caisse"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#, python-format
+msgid "Create Bookings"
+msgstr "Créer des réservations"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_search_view
+msgid "Create Date"
+msgstr "créer un rendez-vous"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+msgid "Create Invoice"
+msgstr "Créer une facture"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_search_view
+msgid "Create date"
+msgstr "Créer un rendez-vous"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__create_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__create_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__currency_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__customer_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__customer_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_details_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"Customer\n"
+"                                            <br/>"
+msgstr ""
+"Cliente\n"
+"                                            <br/>"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Customer Details"
+msgstr "Détails du client"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_customer_food_order
+msgid "Customer Food Order Details"
+msgstr "Détails de la commande de nourriture du client"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__customer_foods_ids
+msgid "Customer Foods"
+msgstr "Aliments des clients"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_customer
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_customer_booking_action
+msgid "Customers Details"
+msgstr "Détails des clients"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__date
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_search_view
+msgid "Date"
+msgstr "Date"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Date Details"
+msgstr "Détails des dates"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Date wise booking"
+msgstr "Réservation par date"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "Days"
+msgstr "Jours"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__deadline_date
+msgid "Deadline"
+msgstr "Date limite"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__end_date
+msgid "Deadline Date"
+msgstr "Date limite"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__customer_food_order__stages__delivered
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_restaurant__stages__delivered
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Delivered"
+msgstr "Livré"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_form_view
+msgid "Deposit"
+msgstr "Dépôt"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__deposit_amount
+msgid "Deposit Amount"
+msgstr "Montant du dépôt"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__description
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__desc
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Description"
+msgstr "Description"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_dinner_included
+msgid "Dinner"
+msgstr "Dîner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__dinner_charge
+msgid "Dinner Charges"
+msgstr "Frais de dîner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__display_name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__document
+msgid "Document"
+msgstr "Document"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_details_form_view
+msgid "Document Details"
+msgstr "Détails du document"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__id_name
+msgid "Document Name"
+msgstr "Nom du document"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__id_number
+msgid "Document Number"
+msgstr "numéro de document"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__stages__draft
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_feast__stages__draft
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__driver_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_res_partner__is_driver
+#: model:ir.model.fields,field_description:tk_hotel_management.field_res_users__is_driver
+msgid "Driver"
+msgstr "Conductrice"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_transport_driver_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_transport_driver
+msgid "Drivers"
+msgstr "Conductrices"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_transport__transport_type__drop
+msgid "Drop"
+msgstr "Baisse"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__invoice_due
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__invoice_due
+msgid "Due"
+msgstr "Exigible"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__end_datetime
+msgid "End"
+msgstr "Fin"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__end_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__end_date
+#, python-format
+msgid "End Date"
+msgstr "Date de fin"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__end_date
+msgid "Event End"
+msgstr "Fin de l'événement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__start_date
+msgid "Event Start"
+msgstr "Début de l'événement"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Extra Service"
+msgstr "Services supplémentaires"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__extra_service_charges
+msgid "Extra Service Charges"
+msgstr "Frais de service supplémentaires"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__extra_charges_desc
+msgid "Extra Service Charges Desc"
+msgstr "Frais de service supplémentaires Desc"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_extra_services_action
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Extra Services"
+msgstr "Services supplémentaires"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_room_facilities
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__hall_facilities_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__room_facilities_ids
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_facilities_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Facilities"
+msgstr "Installations"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__name
+msgid "Facilities Name"
+msgstr "Nom des installations"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__feast_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__feast_id
+msgid "Feast"
+msgstr "Festin"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__file_name
+msgid "File Name"
+msgstr "Nom de fichier"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__agent_commission_type__fix
+msgid "Fix"
+msgstr "Réparer"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_floor
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__floor_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__floor_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_search_view
+msgid "Floor"
+msgstr "Sol"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__name
+msgid "Floor Number"
+msgstr "Numéro d'étage"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__floor_number_sequence
+msgid "Floor Number Sequence"
+msgstr "Séquence des numéros d'étage"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_floor_tree_view
+msgid "Floor Sequence"
+msgstr "Séquence d'étage"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_floor_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_floor
+msgid "Floors"
+msgstr "Sols"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_follower_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_follower_ids
+msgid "Followers"
+msgstr "Suiveuses"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_partner_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__activity_type_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône géniale de police, par ex. fa-tâches"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__food_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__name
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_food_order_search_view
+#, python-format
+msgid "Food"
+msgstr "Nourriture"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_restaurant_food_category_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_food_category
+msgid "Food Categories"
+msgstr "Catégories d'aliments"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__food_category
+msgid "Food Category"
+msgstr "Catégorie d'aliments"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_food_category
+msgid "Food Category Details"
+msgstr "Détails de la catégorie d'aliments"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_food_item
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Food Details"
+msgstr "Détails de la nourriture"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__food_included
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Food Included"
+msgstr "Nourriture incluse"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_food_item
+msgid "Food Items"
+msgstr "Produits alimentaires"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_customer_food_order_action
+msgid "Food Orders"
+msgstr "Commandes de nourriture"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__food_sequence
+msgid "Food Sequence"
+msgstr "Séquence alimentaire"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_restaurant_food_action
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_order_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Foods"
+msgstr "nourriture"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Free"
+msgstr "Gratuite"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__person_Id
+msgid "Full Name"
+msgstr "Nom et prénom"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_proof_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_food_order_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_table_details_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_search_view
+msgid "Group By"
+msgstr "Par groupe"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__hall_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__hall_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__is_hall
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__table_id
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_hall
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_booking_search_view
+#, python-format
+msgid "Hall"
+msgstr "Salle"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_feast_action
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__hall_booking_id
+msgid "Hall Booking"
+msgstr "Réservation de salle"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_hall_booking
+msgid "Hall Booking"
+msgstr "Réservation de salle"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_hall_action
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration_hall
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_form_view
+msgid "Hall Details"
+msgstr "Détails de la salle"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__hall_no
+msgid "Hall No."
+msgstr "Salle n°"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__hall_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_form_view
+msgid "Hall Number"
+msgstr "Numéro de salle"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__hall_cancel
+msgid "Hall cancel"
+msgstr "Salle annulée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__has_message
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.main_menu_hotel
+msgid "Hotel"
+msgstr "Hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_booking_invoice
+msgid "Hotel Booking Invoice Details"
+msgstr "Détails de la facture de réservation d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_booking
+msgid "Hotel Bookings"
+msgstr "Réservations d'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_cancellation_charge_product_template
+msgid "Hotel Cancellation Charge"
+msgstr "Frais d'annulation de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_extra_services
+msgid "Hotel Extra Service"
+msgstr "Service supplémentaire de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_extra_services_charge_product_template
+msgid "Hotel Extra Services Charges"
+msgstr "Frais de services supplémentaires de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_feast
+#: model:ir.model,name:tk_hotel_management.model_hotel_hall_booking
+msgid "Hotel Hall Booking"
+msgstr "Réservation de salle d'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_feast_charges_product_template
+msgid "Hotel Hall Charge"
+msgstr "Frais de salle d'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_feast_deposit_product_template
+msgid "Hotel Hall Deposit"
+msgstr "Dépôt de la salle de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_invoice_product_template
+msgid "Hotel Invoice"
+msgstr "Facture de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_laundry_charge_product_template
+msgid "Hotel Laundry Charges"
+msgstr "Frais de blanchisserie de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.actions.client,name:tk_hotel_management.action_hotel_dashboard
+#: model:ir.module.category,name:tk_hotel_management.module_hotel_management
+msgid "Hotel Management"
+msgstr "Gestion de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.actions.server,name:tk_hotel_management.hotel_night_invoice_ir_actions_server
+#: model:ir.cron,cron_name:tk_hotel_management.hotel_night_invoice
+msgid "Hotel Management : Invoice Posted every Night"
+msgstr "Gestion de l'hôtel : Facture affichée chaque nuit"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_manager
+msgid "Hotel Manager"
+msgstr "Directeur de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_restaurant_charge_product_template
+msgid "Hotel Restaurant Charges"
+msgstr "Frais de restaurant de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_room
+msgid "Hotel Room"
+msgstr "Chambre d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_room_category
+msgid "Hotel Room Category"
+msgstr "Catégorie de chambre d'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_room_charge_product_template
+msgid "Hotel Room Charges"
+msgstr "Frais de chambre d'hôtel"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#: model:ir.actions.client,name:tk_hotel_management.action_hotel_room_dashboard
+#, python-format
+msgid "Hotel Room Dashboard"
+msgstr "Tableau de bord de la chambre d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_room_details
+msgid "Hotel Room Detail"
+msgstr "Détail de la chambre d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_room_type
+msgid "Hotel Room Type"
+msgstr "Type de chambre d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_staff
+msgid "Hotel Staff"
+msgstr "Personnel d'hôtel"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Hotel Statistic"
+msgstr "Statistique de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_table_booking
+msgid "Hotel Table Booking"
+msgstr "Réservation de table d'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_transport
+msgid "Hotel Transport details"
+msgstr "Détails du transport de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:product.template,name:tk_hotel_management.hotel_transportation_charge_product_template
+msgid "Hotel Transportation Charges"
+msgstr "Frais de transport de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_hall
+msgid "Hotel hall"
+msgstr "Hall de l'hôtel"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__housekeeper_ids
+msgid "Housekeeper"
+msgstr "Gouvernante"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_housekeeper
+msgid "Housekeeper User"
+msgstr "Utilisateur de la femme de ménage"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_housekeeping
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_housekeeping_details
+msgid "Housekeeping"
+msgstr "Entretien ménager"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_housekeeping_action
+#: model:ir.model,name:tk_hotel_management.model_hotel_housekeeping
+msgid "Housekeeping Details"
+msgstr "Détails de l'entretien ménager"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hr_employee
+msgid "Housekeeping Employees Details"
+msgstr "Détails des employés d'entretien ménager"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__housekeeping_number
+msgid "Housekeeping Number"
+msgstr "Numéro de ménage"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__housekeeping_type
+msgid "Housekeeping Type"
+msgstr "Type d'entretien ménager"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_search_view
+msgid "Housekeeping type"
+msgstr "Type de ménage"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__id
+msgid "ID"
+msgstr "IDENTIFIANT"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_exception_icon
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__activity_exception_icon
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__message_needaction
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si cette case est cochée, de nouveaux messages nécessitent votre attention."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__message_has_sms_error
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__message_has_error
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si cette case est cochée, certains messages présentent une erreur de livraison."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_housekeeping__state__in_progress
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__laundry_service__stages__in_progress
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__cancels_invoice_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__feast_invoice_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__invoice_id
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__invoice_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__cancels_invoice_id
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__invoice_payment_type
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__invoice_payment_type
+msgid "Invoice Payment"
+msgstr "Paiement de facture"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__invoice_payment_type__by_night
+msgid "Invoice Posted by Night"
+msgstr "Facture envoyée par nuit"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__is_room_change_charges
+msgid "Is Charges"
+msgstr "Est-ce que des frais"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_is_follower
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_is_follower
+msgid "Is Follower"
+msgstr "Est suiveur"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__is_invoice_created
+msgid "Is Invoice Created"
+msgstr "La facture est-elle créée"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_tree_view
+msgid "Is Table Booking"
+msgstr "Est-ce que la réservation de table"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__journal_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__journal_id
+msgid "Journal"
+msgstr "Journal"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle____last_update
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__write_uid
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_booking_excel_report__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_category__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_facilities__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_cancellation__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__write_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__laundry_ids
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Laundry"
+msgstr "Lessive"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__laundry_total_charges
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__laundry_charges
+msgid "Laundry Charges"
+msgstr "Frais de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__laundry_charges_desc
+msgid "Laundry Charges Desc"
+msgstr "Description des frais de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.hotel_laundry_service_details
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration_Laundry_details
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Laundry Details"
+msgstr "Détails de la lessive"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_laundry_item_action
+msgid "Laundry Item"
+msgstr "Article de lessive"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_item__name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__laundry_item_ids
+msgid "Laundry Items"
+msgstr "Articles de lessive"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_laundry_service_type_action
+#: model:ir.ui.menu,name:tk_hotel_management.hotel_laundry_service
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_laundry_service
+msgid "Laundry Service"
+msgstr "Service de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_laundry_service_action
+#: model:ir.model,name:tk_hotel_management.model_laundry_service
+msgid "Laundry Service Details"
+msgstr "Détails du service de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__laundry_service_number
+msgid "Laundry Service Number"
+msgstr "Numéro de service de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_laundry_service_type
+msgid "Laundry Service Type"
+msgstr "Type de service de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__laundry_service_type_number
+msgid "Laundry Service Type Number"
+msgstr "Numéro de type de service de blanchisserie"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Laundry Services"
+msgstr "Services de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_laundry
+msgid "Laundry User"
+msgstr "Utilisateur de blanchisserie"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_laundry_item
+msgid "Laundry item"
+msgstr "Article de lessive"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__floor_id
+msgid "Location"
+msgstr "Emplacement"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_transport_location_action
+msgid "Location Details"
+msgstr "Détails de l'emplacement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__location
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__name
+msgid "Location Name"
+msgstr "Nom de la localisation"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_location_detail
+msgid "Location details"
+msgstr "Détails de l'emplacement"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_location_form_view
+msgid "Location..."
+msgstr "Emplacement..."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__is_lunch_included
+msgid "Lunch"
+msgstr "Déjeuner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__lunch_charge
+msgid "Lunch Charges"
+msgstr "Frais de déjeuner"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_hall_booking__stage__m
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_housekeeping__housekeeping_type__maintenance
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_room_details__stages__maintenance
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+msgid "Maintenance"
+msgstr "Entretien"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_has_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison du message"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_ids
+msgid "Messages"
+msgstr "messages"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Monthly Booking"
+msgstr "Réservation mensuelle"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__my_activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Date limite de mon activité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_date_deadline
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_summary
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de l'activité suivante"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type d'activité suivant"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "No"
+msgstr "Non"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "No Advance Amount"
+msgstr "Pas de montant d'avance"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__no_of_person
+msgid "No of People"
+msgstr "Nombre de personnes"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__no_of_room
+msgid "No of Rooms"
+msgstr "Nombre de chambres"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "No. of People"
+msgstr "Nombre de personnes"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "No. of Rooms"
+msgstr "Nombre de chambres"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "Not Included"
+msgstr "Non inclus"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_needaction_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__days
+msgid "Number of Days"
+msgstr "Nombre de jours"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_has_error_counter
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__message_needaction_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__message_has_error_counter
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__invoice_payment_type__once
+msgid "Once"
+msgstr "Une fois"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_tree_view
+msgid "Order Date"
+msgstr "Date de commande"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Order List"
+msgstr "Liste de commandes"
+
+#. module: tk_hotel_management
+#. odoo-python
+#: code:addons/tk_hotel_management/models/restaurant.py:0
+#, python-format
+msgid "Order delivered, edit order not allowed."
+msgstr "Commande livrée, modification de la commande non autorisée."
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Pay"
+msgstr "Payer"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__payable_amount
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Payable Amount"
+msgstr "Montant payable"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__payable_due
+msgid "Payable Due"
+msgstr "Payable dû"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__payment_state
+msgid "Payment State"
+msgstr "État du paiement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__payment_state
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__payment_state
+msgid "Payment Status"
+msgstr "Statut de paiement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__agent_payment_state
+msgid "Payment Status"
+msgstr "Statut de paiement"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_transport__stage__pending
+msgid "Pending"
+msgstr "En attente"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_vehicle_form_view
+msgid "Per KM"
+msgstr "Par km"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Per Night"
+msgstr "Par nuit"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Per Quantity"
+msgstr "Par quantité"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__percentage
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_booking__agent_commission_type__percentage
+msgid "Percentage"
+msgstr "Pourcentage"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__hotel_transport__transport_type__pickup
+msgid "Pickup"
+msgstr "Ramasser"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Pickup / Drop Details"
+msgstr "Détails de ramassage / dépôt"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+msgid "Pickup or Drop Details"
+msgstr "Détails du ramassage ou du dépôt"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__customer_food_order__stages__prepared
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Prepared"
+msgstr "Préparé"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_food_item__price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__charges
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_customer_food_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Price"
+msgstr "Prix"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__price
+msgid "Price / Hour"
+msgstr "Prix ​​/ Heure"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_excel_report_form_view
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_booking_proof_details_action
+#: model:ir.model,name:tk_hotel_management.model_proof_details
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__proof_ids
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Proof Details"
+msgstr "Détails de la preuve"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__proof_number
+msgid "Proof Number"
+msgstr "Numéro de preuve"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__quantity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__quantity
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_reception
+msgid "Reception User"
+msgstr "Utilisateur de la réception"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_report
+msgid "Report"
+msgstr "Rapport"
+
+#. module: tk_hotel_management
+#: model:ir.actions.report,name:tk_hotel_management.booking_details_report_id
+msgid "Reports"
+msgstr "Rapports"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields.selection,name:tk_hotel_management.selection__laundry_service__stages__request
+msgid "Request"
+msgstr "Demande"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__table_charges
+msgid "Reservation Charges"
+msgstr "Frais de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_hotel_restaurant
+msgid "Reservation Details"
+msgstr "Détails de la réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__res_end
+msgid "Reservation End"
+msgstr "Fin de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__reservation_number
+msgid "Reservation Number"
+msgstr "Numéro de réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__res_start
+msgid "Reservation Start"
+msgstr "Début de la réservation"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__responsible
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__responsible
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__responsible_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__responsible_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_form_view
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__activity_user_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__restaurant_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__restaurant_ids
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_restaurant_details
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Restaurant"
+msgstr "Restaurant"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__restaurant_services_charges
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__restaurant_charges
+msgid "Restaurant Charges"
+msgstr "Frais de restauration"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__restaurant_charges_desc
+msgid "Restaurant Charges Desc"
+msgstr "Description des frais de restauration"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_restaurant_action
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration_restaurant_details
+msgid "Restaurant Details"
+msgstr "Détails du restaurant"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Restaurant Food Orders"
+msgstr "Commandes de nourriture au restaurant"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_restaurant
+msgid "Restaurant Orders"
+msgstr "Commandes de restaurants"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Restaurant Services"
+msgstr "Services de restauration"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_restaurant
+msgid "Restaurant User"
+msgstr "Utilisateur du restaurant"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__is_room
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__room_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__room_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__room_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__room_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_night_invoice__room_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_search_view
+msgid "Room"
+msgstr "Chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_room_details_action
+msgid "Room Booked Details"
+msgstr "Détails de la chambre réservée"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_room_booking
+msgid "Room Booking"
+msgstr "Réservation de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_room
+msgid "Room Booking Details"
+msgstr "Détails de la réservation de la chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.booking_excel_report_action
+msgid "Room Booking Statistic"
+msgstr "Statistique de réservation de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.room_cancellation_action
+msgid "Room Cancellation"
+msgstr "Annulation de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_room_cancellation
+msgid "Room Cancellation Charge"
+msgstr "Frais d'annulation de chambre"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_room_category
+#, python-format
+msgid "Room Categories"
+msgstr "Catégories de chambres"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__room_category_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_category__name
+msgid "Room Category"
+msgstr "Catégorie de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.room_change_action
+#: model:ir.model,name:tk_hotel_management.model_room_change
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Room Change"
+msgstr "Changement de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__charges
+msgid "Room Change Charges"
+msgstr "Frais de changement de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__room_total_charges
+msgid "Room Charged"
+msgstr "Chambre facturée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__room_total_charges
+msgid "Room Charges"
+msgstr "Frais de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__room_charges_desc
+msgid "Room Charges Desc"
+msgstr "Description des frais de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__total_night_invoice_due
+msgid "Room Charges Due"
+msgstr "Frais de chambre dus"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__total_night_invoice
+msgid "Room Charges Payable"
+msgstr "Frais de chambre à payer"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_room_dashboard
+msgid "Room Dashboard"
+msgstr "Tableau de bord de la salle"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration_room_details
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Room Details"
+msgstr "Détails de la chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_room_facilities_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_room_facilities
+msgid "Room Facilities"
+msgstr "Équipements de la chambre"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Room Invoice"
+msgstr "Facture de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_room_night_invoice
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__room_night_invoice_ids
+msgid "Room Night Invoice"
+msgstr "Facture de nuitée"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__room_no
+msgid "Room No."
+msgstr "Chambre numéro."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__room_id
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_form_view
+msgid "Room Number"
+msgstr "Numéro de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__room_sequence
+msgid "Room Sequence"
+msgstr "Séquence de salle"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_room_change__old_room_id
+msgid "Room To Change"
+msgstr "Chambre à changer"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room__room_type_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_type__name
+msgid "Room Type"
+msgstr "Type de chambre"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_room_type_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_room_type
+msgid "Room Types"
+msgstr "Types de chambres"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_room_action
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__room_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_floor__capacity
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_room_details
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_floor_form_view
+#, python-format
+msgid "Rooms"
+msgstr "Pièces"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_room_category_action
+msgid "Rooms Categories"
+msgstr "Catégories de chambres"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__message_has_sms_error
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur de livraison SMS"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#, python-format
+msgid "Search"
+msgstr "Recherche"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_food_tree_view
+msgid "Sequence Number"
+msgstr "Numéro de séquence"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__service
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Service"
+msgstr "Service"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__service_name_id
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service_type__service_name
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_search_view
+msgid "Service Name"
+msgstr "Nom du service"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_tree_view
+msgid "Service Number"
+msgstr "Numéro de service"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__service_ids
+msgid "Services"
+msgstr "Prestations de service"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hr_employee__is_staff
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_staff
+msgid "Staff"
+msgstr "Personnelle"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_housekeeping_staff_action
+msgid "Staff Details"
+msgstr "Détails du personnel"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__stage
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__stage
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__stage
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_feast_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_food_order_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_housekeeping_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_laundry_service_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_kanban_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_table_details_tree_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_room_details_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_table_details_search_view
+msgid "Stage"
+msgstr "Scène"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__table_stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__stages
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_search_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_hall_booking_search_view
+msgid "Stages"
+msgstr "Étapes"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__stages
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__stages
+msgid "Stages"
+msgstr "Étapes"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__start_datetime
+msgid "Start"
+msgstr "Commencer"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall_booking__start_date
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_table_booking__start_date
+#, python-format
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__state
+msgid "State"
+msgstr "État"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Statics"
+msgstr "Statique"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_dashboard
+msgid "Statistics"
+msgstr "Statistiques"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__activity_state
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date d'activité est aujourd'hui\n"
+"Planifié : Activités futures."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__street
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_location_form_view
+msgid "Street 2..."
+msgstr "Rue # 2..."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__street2
+#: model:ir.model.fields,field_description:tk_hotel_management.field_location_detail__street2
+msgid "Street-2"
+msgstr "Rue # 2"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_location_form_view
+msgid "Street..."
+msgstr "Rue..."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__subtotal_amount
+msgid "Subtotal"
+msgstr "Total"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__table_id
+msgid "Table"
+msgstr "Tableau"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_restaurant_table_details_action
+#: model:ir.model,name:tk_hotel_management.model_table_details
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Table Details"
+msgstr "Détails du tableau"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__table_number
+msgid "Table Number"
+msgstr "Numéro de tableau"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__name
+msgid "Table Number"
+msgstr "Numéro de tableau"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__is_table_booking
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_restaurant_form_view
+msgid "Table Reservation"
+msgstr "Réservation de table"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_table_details
+msgid "Tables"
+msgstr "les tables"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__tax_ids
+msgid "Taxes"
+msgstr "Impôts"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__time
+msgid "Time"
+msgstr "Temps"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Today's Check In"
+msgstr "Enregistrement d'aujourd'hui"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Today's Check Out"
+msgstr "Départ d'aujourd'hui"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Top 5 Customers"
+msgstr "Les 5 meilleurs clients"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__total_amount
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__total_amount
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_extra_services__all_amount
+msgid "Total Amount"
+msgstr "Montant total"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid ""
+"Total Amount\n"
+"                                            <br/>"
+msgstr ""
+"Montant total\n"
+"                                            <br/>"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__total_all_amount
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__total_price
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__total_charges
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+msgid "Total Charges"
+msgstr "Charges totales"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__hours
+msgid "Total Hours"
+msgstr "Heures totales"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__km
+msgid "Total KM"
+msgstr "Kilométrage total"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Total Payable Amount"
+msgstr "Montant total à payer"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Total Payable Due"
+msgstr "Total à payer dû"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__total_charges
+msgid "Total Price"
+msgstr "Prix ​​total"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/js/hotel.js:0
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__transport_ids
+#, python-format
+msgid "Transport"
+msgstr "Transport"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__transport_total_charges
+msgid "Transport Charges"
+msgstr "Frais de transport"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__transport_charges_desc
+msgid "Transport Charges Desc"
+msgstr "Description des frais de transport"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_configuration_transport_details
+#: model:ir.ui.menu,name:tk_hotel_management.menu_hotel_transport
+msgid "Transport Details"
+msgstr "Détails des transports"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_search_view
+msgid "Transport Mode"
+msgstr "Mode de transport"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__transport_number
+msgid "Transport Number"
+msgstr "Numéro de transport"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.hotel_transport_service
+msgid "Transport Service"
+msgstr "Service de transport"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+msgid "Transport Services"
+msgstr "Services de transport"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_search_view
+msgid "Transport Types"
+msgstr "Types de transport"
+
+#. module: tk_hotel_management
+#: model:res.groups,name:tk_hotel_management.hotel_transport
+msgid "Transport User"
+msgstr "Utilisateur des transports"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_invoice_form_view
+msgid "Transportation"
+msgstr "Transport"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking_invoice__transportation_charges
+msgid "Transportation Charges"
+msgstr "Les frais de transport"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/template.xml:0
+#, python-format
+msgid "Transports"
+msgstr "Les transports"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_transport_action
+msgid "Transports Details"
+msgstr "Détails des transports"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__activity_exception_decoration
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée."
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__transport_mode_id
+msgid "Vehicle"
+msgstr "Véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_transport_vehicle
+msgid "Vehicle"
+msgstr "Véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_transport_vehicle_action
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_booking_form_view
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_form_view
+msgid "Vehicle Details"
+msgstr "Les détails du véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__name
+msgid "Vehicle Name"
+msgstr "Nom du véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__vehicle_number
+msgid "Vehicle Number"
+msgstr "Numéro de véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__number
+msgid "Vehicle Number"
+msgstr "Numéro de véhicule"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.hotel_transport_vehicle_tree_view
+msgid "Vehicle Sequence"
+msgstr "Séquence de véhicules"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_transport_vehicle__name
+#: model:ir.model.fields,field_description:tk_hotel_management.field_vehicle_type__vehicle_type_id
+msgid "Vehicle Type"
+msgstr "Type de véhicule"
+
+#. module: tk_hotel_management
+#: model:ir.actions.act_window,name:tk_hotel_management.hotel_transport_vehicle_type_action
+#: model:ir.ui.menu,name:tk_hotel_management.sub_menu_hotel_transport_type_vehicle
+msgid "Vehicle Types"
+msgstr "Types de véhicules"
+
+#. module: tk_hotel_management
+#: model:ir.model,name:tk_hotel_management.model_transport_vehicle
+#: model:ir.model,name:tk_hotel_management.model_vehicle_type
+msgid "Vehicle details"
+msgstr "Les détails du véhicule"
+
+#. module: tk_hotel_management
+#. odoo-javascript
+#: code:addons/tk_hotel_management/static/src/xml/dashboard.xml:0
+#, python-format
+msgid "View All Bookings"
+msgstr "Afficher toutes les réservations"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,field_description:tk_hotel_management.field_customer_food_order__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_booking__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_feast__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_hall__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_housekeeping__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_restaurant__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_room_details__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_hotel_transport__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_laundry_service__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_proof_details__website_message_ids
+#: model:ir.model.fields,field_description:tk_hotel_management.field_table_details__website_message_ids
+msgid "Website Messages"
+msgstr "Messagerie du site Web"
+
+#. module: tk_hotel_management
+#: model:ir.model.fields,help:tk_hotel_management.field_customer_food_order__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_booking__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_feast__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_hall__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_housekeeping__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_restaurant__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_room_details__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_hotel_transport__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_laundry_service__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_proof_details__website_message_ids
+#: model:ir.model.fields,help:tk_hotel_management.field_table_details__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications du site Web"
+
+#. module: tk_hotel_management
+#: model_terms:ir.ui.view,arch_db:tk_hotel_management.booking_details_report
+msgid "Yes"
+msgstr "Oui"

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hotel_feast_form_view" model="ir.ui.view">
+        <field name="name">hotel.feast.form.view</field>
+        <field name="model">hotel.feast</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="stages" widget="statusbar"
+                           statusbar_visible="Draft,Confirm,Complete"/>
+                    <button string="Confirm" name="draft_to_confirm" type="object"
+                            invisible="stages not in ['Draft']"/>
+                    <button string="Cancel" name="%(room_cancellation_action)d" type="action"
+                            class="btn btn-outline-danger"
+                            context="{'hall_cancel':True}"
+                            invisible="stages in ['Cancel','Draft','Complete']"/>
+                    <field name="feast_invoice_id" invisible="1"/>
+                    <button string="Create Invoice" class="btn btn-outline-success"
+                            name="feast_invoice" type="object"
+                            invisible="feast_invoice_id or stages in ['Draft','Cancel']"/>
+                </header>
+                <sheet>
+                    <h1 class="oe_title">
+                        <field name="booking_number" readonly="1"/>
+                    </h1>
+
+
+                    <group>
+                        <group>
+                            <field name="customer_id" readonly="stages == 'Complete'"/>
+                        </group>
+                        <group>
+                            <field name="responsible" widget="many2one_responsible" readonly="stages == 'Complete'"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="start_date" required="1" readonly="stages == 'Complete'"/>
+                        </group>
+                        <group>
+                            <field name="end_date" required="1" readonly="stages == 'Complete'"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="hall_ids" invisible="1"/>
+                            <label for="hall_id" class="mt-1" invisible="not start_date or not end_date"/>
+                            <div name="hall_id" invisible="not start_date or not end_date">
+                                <field name="hall_id" required="1" class="oe_inline" force_save="1"
+                                       readonly="stages == 'Complete'" invisible="not start_date or not end_date"/>
+                            </div>
+                            <field name="floor_id" required="1"/>
+                            <field name="hours" required="1"/>
+                        </group>
+                        <group>
+                            <field name="price"/>
+                            <field name="capacity"/>
+                            <field name="total_all_amount"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="is_deposit" readonly="stages == 'Complete'"/>
+                        </group>
+                        <group>
+                            <label for="feast_invoice_id" class="mt-1"
+                                   invisible="not feast_invoice_id"/>
+                            <div name="feast_invoice_id">
+                                <field name="feast_invoice_id" readonly="1" class="oe_inline"
+                                       force_save="1"
+                                       style="width:65%;"
+                                       invisible="not feast_invoice_id"/>
+                                <field name="payment_state" invisible="not feast_invoice_id"
+                                       widget="badge" style="margin-left: 10px;width:35%;"
+                                       decoration-success="payment_state=='paid'"
+                                       decoration-danger="payment_state=='not_paid'"
+                                       decoration-info="payment_state=='in_payment'"
+                                       decoration-primary="payment_state=='partial'"
+                                       decoration-warning="payment_state=='reversed'"/>
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Deposit" invisible="not is_deposit">
+                            <group>
+                                <group>
+                                    <field name="deposit_amount" required="is_deposit" readonly="stages == 'Complete'"/>
+                                </group>
+                                <group>
+                                    <field name="journal_id" required="is_deposit" readonly="stages == 'Complete'"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Cancellation"
+                              invisible="stages in ['Draft','Confirm','Complete']">
+                            <group>
+                                <group>
+                                    <field name="is_cancellation_charge" invisible="1"/>
+                                    <field name="cancels_invoice_id" readonly="1"
+                                           invisible="not cancels_invoice_id"/>
+                                </group>
+                                <group>
+                                    <field name="cancellation_charge" readonly="1"
+                                           invisible="not is_cancellation_charge"/>
+                                </group>
+                            </group>
+                            <group string="Cancellation Reason">
+                                <field name="cancellation_reason" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Extra Services" name="extra_services">
+                            <field name="extra_service_ids"
+                                   readonly="stages in ['Complete', 'Cancel']">
+                                <list editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="service_description"/>
+                                    <field name="quantity"/>
+                                    <field name="amount"/>
+                                    <field name="total_amount"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group class="oe_subtotal_footer oe_right" style="text-align: right">
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="total_service_charges"
+                                           string="Total Service Charges"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+
+            </form>
+        </field>
+    </record>
+    <record id="hotel_hall_calendar_view" model="ir.ui.view">
+        <field name="name">hotel.hall.calendar.view</field>
+        <field name="model">hotel.feast</field>
+        <field name="arch" type="xml">
+            <calendar date_start="create_date" mode="month" quick_create="False" hide_time="True"
+                      event_open_popup="True"
+                      color="booking_number">
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+            </calendar>
+        </field>
+    </record>
+    <record id="hotel_hall_booking_search_view" model="ir.ui.view">
+        <field name="name">hotel.hall.booking.search.view</field>
+        <field name="model">hotel.feast</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+                <field name="create_date"/>
+                <field name="hall_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="responsible"/>
+                <field name="total_all_amount"/>
+                <group string="Group By">
+                    <filter name="draft" string="Draft" domain="[('stages', '=', 'Draft')]"/>
+                    <filter name="confirm" string="Confirm" domain="[('stages', '=', 'Confirm')]"/>
+                    <filter name="complete" string="Complete" domain="[('stages', '=', 'Complete')]"/>
+                    <filter name="cancel" string="Cancel" domain="[('stages', '=', 'Cancel')]"/>
+                    <separator/>
+                    <filter name="create_date" string="Booking Date" date="create_date"/>
+                    <separator/>
+                    <filter name="start_date" string="Event Start" date="start_date"/>
+                    <filter name="end_date" string="Event End" date="end_date"/>
+                    <separator/>
+                    <filter name="create_date" string="Booking Date "
+                            context="{'group_by':'create_date' }"/>
+                    <separator/>
+                    <filter name="start_date" string="Event Start"
+                            context="{'group_by':'start_date' }"/>
+                    <filter name="end_date" string="Event End" context="{'group_by':'end_date' }"/>
+                    <separator/>
+                    <filter name="responsible_person" string="Responsible"
+                            context="{'group_by':'responsible' }"/>
+                    <separator/>
+                    <filter name="hall_id" string="Hall" context="{'group_by':'hall_id' }"/>
+                    <separator/>
+                    <filter name="customer_id" string="Customer"
+                            context="{'group_by':'customer_id' }"/>
+                    <separator/>
+                    <filter name="status" string="Status" context="{'group_by': 'stages'}"/>
+                </group>
+                <searchpanel>
+                    <field name="stages" string="Status" enable_counters="1" icon="fa-filter"
+                           select="multi"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+    <record id="hotel_feast_list_view" model="ir.ui.view">
+        <field name="name">hotel.feast.list.view</field>
+        <field name="model">hotel.feast</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="booking_number"/>
+                <field name="customer_id"/>
+                <field name="create_date" string="Booking Date"/>
+                <field name="hall_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="responsible"/>
+                <field name="currency_id" column_invisible="1"/>
+                <field name="total_all_amount"/>
+                <field name="stages" widget="badge" decoration-success="stages=='Confirm'"
+                       decoration-danger="stages=='Cancel'" decoration-info="stages=='Complete'"
+                       string="Status"/>
+
+            </list>
+        </field>
+    </record>
+    <record id="hotel_feast_action" model="ir.actions.act_window">
+        <field name="name">Hall Bookings</field>
+        <field name="res_model">hotel.feast</field>
+        <field name="view_mode">list,form,calendar,activity</field>
+    </record>
+</odoo>

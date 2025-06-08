@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="main_menu_hotel" name="Hotel"
+              web_icon="tk_hotel_management,static/description/icon.png"/>
+    <!--Dashboard Menu-->
+    <menuitem id="menu_hotel_room_dashboard" name="Dashboard" sequence="01"
+              action="action_hotel_room_dashboard"
+              parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+
+    <!--Booking-->
+    <menuitem id="menu_hotel_booking" name="Bookings" sequence="2" parent="main_menu_hotel"
+              action="hotel_booking_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+    <menuitem id="menu_hotel_room_booking" name="Room Bookings" sequence="1"
+              parent="menu_hotel_booking"
+              action="hotel_booking_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+    <menuitem id="menu_hotel_hall_booking" name="Hall Bookings " sequence="2"
+              parent="menu_hotel_booking"
+              action="hotel_feast_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+
+    <!--Customer-->
+    <menuitem id="menu_hotel_customer" name="Customers" sequence="3" parent="main_menu_hotel"
+              action="hotel_customer_booking_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+
+    <!--Restaurant-->
+    <menuitem id="menu_hotel_restaurant" name="Restaurant Orders" sequence="4"
+              parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_restaurant,tk_hotel_management.hotel_reception"/>
+    <menuitem id="menu_hotel_restaurant_details" name="Restaurant" sequence="1"
+              parent="menu_hotel_restaurant"
+              action="hotel_restaurant_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_restaurant,tk_hotel_management.hotel_reception"/>
+    <menuitem id="sub_menu_hotel_food_item" name="Food Items" sequence="2"
+              parent="menu_hotel_restaurant"
+              action="hotel_restaurant_food_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_restaurant,tk_hotel_management.hotel_reception"/>
+    <menuitem id="sub_menu_hotel_food_category" name="Food Categories" sequence="3"
+              parent="menu_hotel_restaurant"
+              action="hotel_restaurant_food_category_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_restaurant,tk_hotel_management.hotel_reception"/>
+
+    <!--Laundry-->
+    <menuitem id="hotel_laundry_service" name="Laundry Services" sequence="5"
+              parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_laundry,tk_hotel_management.hotel_reception"/>
+    <menuitem id="hotel_laundry_service_details" name="Laundry Details" sequence="1"
+              parent="hotel_laundry_service"
+              action="hotel_laundry_service_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_laundry,tk_hotel_management.hotel_reception"/>
+
+    <!--Transport-->
+    <menuitem id="hotel_transport_service" name="Transport Services" sequence="6"
+              parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_transport,tk_hotel_management.hotel_reception"/>
+    <menuitem id="menu_hotel_transport" name="Transport Details" sequence="1"
+              parent="hotel_transport_service"
+              action="hotel_transport_action"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_transport,tk_hotel_management.hotel_reception"/>
+
+    <!--Staff-->
+    <menuitem id="menu_hotel_staff" name="Staff" sequence="7" parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="menu_hotel_agent" name="Agents" sequence="1" parent="menu_hotel_staff"
+              action="hotel_agent_action"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_staff" name="Hotel Staff" sequence="2" parent="menu_hotel_staff"
+              action="hotel_housekeeping_staff_action" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_transport_driver" name="Drivers" sequence="3"
+              parent="menu_hotel_staff"
+              action="hotel_transport_driver_action" groups="tk_hotel_management.hotel_manager"/>
+
+    <!--Booking
+    Details Report-->
+    <menuitem id="menu_hotel_report" name="Reports" sequence="8" parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="menu_report_booking_excel" name="Booking Excel" sequence="0"
+              parent="menu_hotel_report"
+              action="booking_excel_report_action" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="menu_hotel_room" name="Room Booking Details" sequence="1"
+              parent="menu_hotel_report" action="hotel_room_details_action"
+              groups="tk_hotel_management.hotel_manager"/>
+
+    <!--Housekeeping-->
+    <menuitem id="menu_hotel_housekeeping" name="Housekeeping" sequence="9" parent="main_menu_hotel"
+              action="hotel_housekeeping_action" active="False"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_housekeeper,tk_hotel_management.hotel_reception"/>
+
+    <!--Task-->
+    <menuitem name="Tasks"
+              id="menu_hotel_project_task"
+              parent="main_menu_hotel"
+              action="hotel_see_my_tasks_action"
+              sequence="10"
+              groups="tk_hotel_management.hotel_housekeeper"/>
+    <menuitem name="Tasks"
+              id="menu_hotel_project_task_all"
+              parent="main_menu_hotel"
+              action="hotel_see_all_tasks_action"
+              sequence="11"
+              groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_hotel_configuration" name="Configurations" sequence="12"
+              parent="main_menu_hotel"
+              groups="tk_hotel_management.hotel_manager"/>
+    <!-- Room Configuration -->
+    <menuitem id="menu_hotel_configuration_room_details" name="Room Details" sequence="1"
+              parent="menu_hotel_configuration" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_floor" name="Floors" sequence="0"
+              parent="menu_hotel_configuration_room_details"
+              action="hotel_floor_action" groups="tk_hotel_management.hotel_manager"/>
+
+    <menuitem id="sub_menu_hotel_room_details" name="Rooms" sequence="2"
+              parent="menu_hotel_configuration_room_details"
+              action="hotel_room_action" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_room_facilities" name="Room Facilities" sequence="3"
+              parent="menu_hotel_configuration_room_details" action="hotel_room_facilities_action"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_room_type" name="Room Types" sequence="5"
+              parent="menu_hotel_configuration_room_details" action="hotel_room_type_action"
+              groups="tk_hotel_management.hotel_manager"/>
+
+
+    <!-- Hall Configurations-->
+    <menuitem id="menu_hotel_configuration_hall" name="Hall Details" sequence="2"
+              parent="menu_hotel_configuration"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_hall" name="Banquet Halls" sequence="0"
+              parent="menu_hotel_configuration_hall"
+              action="hotel_hall_action" groups="tk_hotel_management.hotel_manager"/>
+
+    <!-- Transport Configuration -->
+    <menuitem id="menu_hotel_configuration_transport_details" name="Transport Details" sequence="3"
+              parent="menu_hotel_configuration" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_transport_vehicle" name="Vehicles " sequence="1"
+              parent="menu_hotel_configuration_transport_details" action="hotel_transport_vehicle_action"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_transport_type_vehicle" name="Vehicle Types" sequence="2"
+              parent="menu_hotel_configuration_transport_details"
+              action="hotel_transport_vehicle_type_action"
+              groups="tk_hotel_management.hotel_manager"/>
+
+    <!-- Restaurant Configuration -->
+    <menuitem id="menu_hotel_configuration_restaurant_details" name="Restaurant Details"
+              sequence="4"
+              parent="menu_hotel_configuration" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_table_details" name="Tables" sequence="1"
+              parent="menu_hotel_configuration_restaurant_details"
+              action="hotel_restaurant_table_details_action"
+              groups="tk_hotel_management.hotel_manager"/>
+
+    <!-- Laundry Configuration -->
+    <menuitem id="menu_hotel_configuration_Laundry_details" name="Laundry Details" sequence="5"
+              parent="menu_hotel_configuration" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_laundry_service" name="Laundry Services" sequence="1"
+              parent="menu_hotel_configuration_Laundry_details" action="hotel_laundry_service_type_action"
+              groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="sub_menu_hotel_laundry_items" name="Laundry Items" sequence="0"
+              parent="menu_hotel_configuration_Laundry_details" action="hotel_laundry_item_action"
+              groups="tk_hotel_management.hotel_manager"/>
+
+    <menuitem id="menu_hotel_configuration_seasonal_price_root" name="Seasonal Pricing" sequence="6"
+              parent="menu_hotel_configuration" groups="tk_hotel_management.hotel_manager"/>
+    <menuitem id="menu_hotel_configuration_seasonal_price" name="Seasonal Prices" sequence="1"
+              parent="menu_hotel_configuration_seasonal_price_root"
+              groups="tk_hotel_management.hotel_manager"
+              action="season_price_action"/>
+
+
+    <!-- Pos -->
+     <record id="action_pos_pos_form" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">pos.order</field>
+            <field name="view_mode">list,form,kanban,pivot</field>
+            <field name="domain">[('booking_id', '!=',False)]</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    No orders found
+                </p>
+                <p>
+                    To record new orders, start a new session.
+                </p>
+            </field>
+        </record>
+
+    <menuitem id="menu_hotel_pos_orders" name="POS Orders" sequence="3" parent="main_menu_hotel"
+                  action="action_pos_pos_form"
+                  groups="tk_hotel_management.hotel_manager,tk_hotel_management.hotel_reception"/>
+</odoo>

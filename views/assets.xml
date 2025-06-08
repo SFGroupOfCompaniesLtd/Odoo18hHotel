@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+       <record id="action_hotel_dashboard" model="ir.actions.client">
+           <field name="name">Hotel Management</field>
+           <field name="tag">hotel_dashboard</field>
+       </record>
+        <record id="action_hotel_room_dashboard" model="ir.actions.client">
+            <field name="name">Hotel Room Dashboard</field>
+            <field name="tag">hotel_room_dashboard</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="room_change_form_view" model="ir.ui.view">
+            <field name="name">room.change.form.view</field>
+            <field name="model">room.change</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="old_room_ids" invisible="1"/>
+                            <field name="room_ids" invisible="1"/>
+                            <field name="booking_id" invisible="1"/>
+                            <field name="old_room_id" required="1" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="check_in" required="1" readonly="1" force_save="1"
+                                   invisible="not old_room_id"/>
+                        </group>
+                        <group>
+                            <field name="check_out" required="1" readonly="1" force_save="1"
+                                   invisible="not old_room_id"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="room_id" required="1" string="New Room" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="is_room_change_charges" string="Is Any Room Charges"/>
+                        </group>
+                        <group>
+                            <field name="charges"
+                                   required="is_room_change_charges"
+                                   invisible="not is_room_change_charges"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Change" name="action_room_change" type="object"
+                                class="oe_highlight"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="room_change_action" model="ir.actions.act_window">
+            <field name="name">Room Change</field>
+            <field name="res_model">room.change</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</odoo>
